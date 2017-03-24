@@ -3,7 +3,7 @@
 //不限执行时间
 set_time_limit(0); 
 $fileName="prolist.txt";
-//获取图片地址和采集页网址
+//从txt中获取图片地址和采集页网址
 function getImgUrls($fileName){
 	$lineArray=array();
 	$fp = fopen($fileName, "r") or die("Unable to open file ".$fileName);
@@ -72,33 +72,114 @@ function downImg($url, $saveName)
     fclose($in);
     fclose($out);
 }
-//根据url获取title，des中的内容，以及content的前两段
-function getTitleDes($url){
+//获取网页中的banner标题描述和图片
+function getTitleDesImg($url){
     $fContent=file_get_contents($url);
-    //从网页中采集title和description以及content前两段
+    //从网页中采集title和description和对应图片以及content前两段
     $resultContent=array();
     $resultTitle=array();
     $resultDes=array();
-    $regDivCarousel="~<div class=\"carousel-desc mt20\">(.*?)</div>~is";
+    $imgSrc=array();
+    $regDivCarousel="~<div class=\"carousel-desc mt20\">(.*?)</section>~is";
     $regTitle="~<h1>(.*?)</h1>~is";
     $regDes="~<p>(.*?)</p>~is";
+    $regTitleDes="~<div class=\"carousel-desc mt20\">(.*?)</div>~is";
+    $regImgBox="<div class=\"imgbox\">(.*?)</div>~is";
+    $regImgSrc="~<img.*?src=\"(.*?)\".*?>~is"; 
+
     preg_match($regDivCarousel,$fContent,$resultContent);
-    $divCarousel=trim($resultContent[1]);
-    if(!empty($resultContent)){
+
+    $divCarousel=trim($resultContent[0]);
+    if(!empty($divCarousel)){
         preg_match($regTitle,$divCarousel,$resultTitle);
         @$title=$resultTitle[1];
-        preg_match_all($regDes,$divCarousel,$resultDes);
-        foreach ($des=$resultDes[1] as $key => $value) {
-           @$des=$value.PHP_EOL;
+
+        preg_match($regTitleDes,$divCarousel,$resultTitleDes);
+        @$titleDes=$resultTitleDes[1];
+
+        preg_match_all($regImgSrc,$divCarousel,$resultImgSrc);
+        
+        foreach ($resultImgSrc[1] as $key => $value) {
+
+            @$imgSrc[]=$value;
         }
-       
+
+        preg_match_all($regDes,$divCarousel,$resultDes);
+
+        foreach ($resultDes[1] as $key => $value) {
+            @$des=$value.PHP_EOL;
+        }
+
     }else{
         echo "not collected DivCarousel content";
 
     }
 
-    return array($title,$des,$divCarousel);
+    return array("title"=>$title,"des"=>$des,"titleDes"=>$titleDes,"img"=>$imgSrc);
+
+}
+//根据url获取content页面的后半段内容以及对应的图片
+function getContentImg($url){
+
+    $fContent=file_get_contents($url);
+    //从网页中采集title和description以及content前两段
+    $resultContent=array();
+    $resultTitle=array();
+    $resultDes=array();
+    $regPro="~<div class=\"pro-detail clearfix\">(.*?)</section>~is";
+    $regH="~<h\d>(.*?)</h\d>~is";
+    $regP="~<p>(.*?)</p>~is";
+    $regImgSrc="~<img.*?src=\"(.*?)\".*?>~is";
+    preg_match_all($regPro,$fContent,$resultContent);
+    $ProArr=$resultContent[0];
+    if(!empty($resultContent)){
+        foreach ($ProArr as $key => $value) {
+            $pro=trim($value);
+            preg_match($regH,$pro,$resultH);
+            @$H[]=$resultH[0];
+            preg_match($regImgSrc,$pro,$resultImgSrc);
+            @$imgSrc[]=$resultImgSrc[1];
+            preg_match_all($regP,$pro,$resultP);
+            foreach ($resultP[0] as $key => $value) {
+             @$p[]=$value;
+         }
+     }
+
+
+ }else{
+    echo "not collected Pro content";
 
 }
 
+return array("h"=>$H,"p"=>$p,"img"=>$imgSrc);
+
+}
+
+
+function outPutHtml($url,$imgSrc){
+    $fnTitle="title.html";
+    $fnDes="des.html";
+    $fnContent="content.html";
+
+    $pName=getProductName($url);
+    
+    if (!file_exists($pName)){
+        mkdir ($pName); 
+        echo 'create '.$pName.' success.';
+    } else {echo $pName.' exists';}
+    // if(file_exists($fnTitle))
+    // {
+
+    // }
+
+    // ob_start(); 
+
+    // $temp = ob_get_contents(); 
+    // ob_end_clean(); 
+    // //写入文件 
+    // $fp = fopen(‘xxx.html','w'); 
+    // fwrite($fp,$temp) or die(‘写文件错误'); 
+}
+
+outPutHtml("http://www.shibangchina.com/products/mtm_mill.html","http://www.shibangchina.com/images/products/mtm/1.png");
 ?>
