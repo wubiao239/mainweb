@@ -2,6 +2,7 @@
 @header("Content-Type: text/html; charset=UTF-8");
 //不限执行时间
 set_time_limit(0); 
+error_reporting(0);
 $fileName="prolist.txt";
 $domain="http://www.shibangchina.com";
 //从txt中获取图片地址和采集页网址
@@ -272,7 +273,7 @@ function processImg($url,$imgSrc){
 function main(){
 	global $fileName;
 	$allUrl=getImgUrls($fileName);
-	
+	print_r($allUrl);
 	for ($i=0; $i < count($allUrl); $i++) { 
 		$imgSrc=trim($allUrl[$i][0]);
 		$url=trim($allUrl[$i][1]);
