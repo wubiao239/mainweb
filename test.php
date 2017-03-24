@@ -90,7 +90,7 @@ function getTitleDesImg($url){
 
 	preg_match($regDivCarousel,$fContent,$resultContent);
 
-	$divCarousel=trim($resultContent[0]);
+	@$divCarousel=trim($resultContent[0]);
 	if(!empty($divCarousel)){
 		preg_match($regTitle,$divCarousel,$resultTitle);
 		@$title=$resultTitle[1];
@@ -132,7 +132,7 @@ function getContentImg($url){
 	$regP="~<p>(.*?)</p>~is";
 	$regImgSrc="~<img.*?src=\"(.*?)\".*?>~is";
 	preg_match_all($regPro,$fContent,$resultContent);
-	$ProArr=$resultContent[0];
+	@$ProArr=$resultContent[0];
 	if(!empty($resultContent)){
 		foreach ($ProArr as $key => $value) {
 			$pro=trim($value);
@@ -269,7 +269,21 @@ function processImg($url,$imgSrc){
 	}
 
 }
-//processImg("http://www.shibangchina.com/products/mtm_mill.html","http://www.shibangchina.com/images/products/mtm/1.png");
-outPutHtml("http://www.shibangchina.com/products/mtm_mill.html");
+function main(){
+	global $fileName;
+	$allUrl=getImgUrls($fileName);
+	
+	for ($i=0; $i < count($allUrl); $i++) { 
+		$imgSrc=trim($allUrl[$i][0]);
+		$url=trim($allUrl[$i][1]);
+		
+		processImg($url,$imgSrc);
+		outPutHtml($url);
+	}
+	// processImg("http://www.shibangchina.com/products/lm_mill.html","http://www.shibangchina.com/images/products/lm/lm_banner.png");
+	// outPutHtml("http://www.shibangchina.com/products/lm_mill.html");
+	
+}
 
+main();
 ?>
