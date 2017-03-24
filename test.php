@@ -3,6 +3,7 @@
 //不限执行时间
 set_time_limit(0); 
 $fileName="prolist.txt";
+$domain="http://www.shibangchina.com";
 //从txt中获取图片地址和采集页网址
 function getImgUrls($fileName){
 	$lineArray=array();
@@ -170,20 +171,53 @@ function outPutHtml($url,$imgSrc){
         echo $pName.' exists';
     }
 
-    
-    // if(file_exists($fnTitle))
-    // {
-
-    // }
-
-    // ob_start(); 
-
-    // $temp = ob_get_contents(); 
-    // ob_end_clean(); 
-    // //写入文件 
-    // $fp = fopen(‘xxx.html','w'); 
-    // fwrite($fp,$temp) or die(‘写文件错误'); 
+    $infoArr=getTitleDesImg($url);
+    $fp = fopen($pName,'w'); 
+    fwrite($fp,$temp) or die('write '); 
 }
 
-outPutHtml("http://www.shibangchina.com/products/mtm_mill.html","http://www.shibangchina.com/images/products/mtm/1.png");
+function processImg($url,$imgSrc){
+    
+	global $domain;
+    $pName=getProductName($url);
+    
+    if (!file_exists($pName)){
+        mkdir ($pName); 
+        echo 'create '.$pName.' success.';
+    } else {
+        echo $pName.' exists';
+    }
+
+    $fhContent=getTitleDesImg($url);
+    $shContent=getContentImg($url);
+
+    $title=$fhContent['title'];
+    $des=$fhContent['des'];
+    $titleDes=$fhContent['titleDes'];
+    
+    $extension=substr(strrchr($imgSrc, '.'), 1);
+    $saveName=$pName."/".$pName.".".$extension;
+    downImg($imgSrc,$saveName);
+    if($extension="png"){
+    		pngToJpg($saveName,true);
+    }
+    $allImg=array_merge_recursive($fhContent['img'],$shContent['img']);
+    $i=1;
+    foreach ($allImg as $key => $value) {
+    	$allImgSrc=$domain.$value;
+    	$extension=substr(strrchr($value, '.'), 1);
+    	$saveName=$pName."/".$pName."-".$i.".".$extension;
+    	downImg($allImgSrc,$saveName);
+    	if($extension="png"){
+    		pngToJpg($saveName,true);
+    	}
+    	$i++;
+    }
+
+
+  
+   
+}
+
+processImg("http://www.shibangchina.com/products/mtm_mill.html","http://www.shibangchina.com/images/products/mtm/1.png");
 ?>

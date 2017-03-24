@@ -166,7 +166,11 @@ function outPutHtml($url,$imgSrc){
     if (!file_exists($pName)){
         mkdir ($pName); 
         echo 'create '.$pName.' success.';
-    } else {echo $pName.' exists';}
+    } else {
+        echo $pName.' exists';
+    }
+
+    
     // if(file_exists($fnTitle))
     // {
 
