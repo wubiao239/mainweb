@@ -1,4 +1,3 @@
-http://www.shibangchina.com/images/products/lm/lm_banner.png	http://www.shibangchina.com/products/lm_mill.html
 http://www.shibangchina.com/images/products/mb5x/mb5x1.png	http://www.shibangchina.com/products/mb5x.html
 http://www.shibangchina.com/images/products/vsi6x/vsi6x1.png	http://www.shibangchina.com/products/vsi6x.html
 http://www.shibangchina.com/images/products/f5x/f5x1.png	http://www.shibangchina.com/products/f5x.html
@@ -9,6 +8,7 @@ http://www.shibangchina.com/images/products/scm/scm_banner.png	http://www.shiban
 http://www.shibangchina.com/images/products/zonghe/u5052.png	http://www.shibangchina.com/products/mtw_mill.html
 http://www.shibangchina.com/images/products/mtm/1.png	http://www.shibangchina.com/products/mtm_mill.html
 http://www.shibangchina.com/images/products/lum/lum_banner.png	http://www.shibangchina.com/products/lum_mill.html
+http://www.shibangchina.com/images/products/lm/lm_banner.png	http://www.shibangchina.com/products/lm_mill.html
 http://www.shibangchina.com/images/products/ld_yidongpo/ld_banner.png	http://www.shibangchina.com/products/ld_yidongpo.html
 http://www.shibangchina.com/images/products/k/k_banner.png	http://www.shibangchina.com/products/k.html
 http://www.shibangchina.com/images/products/vu/vu_banner.png	http://www.shibangchina.com/products/vu.html
