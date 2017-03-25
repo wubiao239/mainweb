@@ -1,6 +1,6 @@
 <?php
 @header("Content-Type: text/html; charset=UTF-8");
-//error_reporting(0);
+error_reporting(0);
 //从txt中获取图片地址和采集页网址
 function getImgUrls($fileName){
 	$lineArray=array();
@@ -70,7 +70,9 @@ function downImg($url, $saveName)
 	fclose($in);
 	fclose($out);
 }
+
 //获取网页中的banner标题描述和图片
+//舍弃的方法getSource()优化效果更好
 function getTitleDesImg($url){
 	$fContent=file_get_contents($url);
     //从网页中采集title和description和对应图片以及content前两段
@@ -119,6 +121,7 @@ function getTitleDesImg($url){
 
 }
 //根据url获取content页面的后半段内容以及对应的图片
+//舍弃的方法getSource()优化效果更好
 function getContentImg($url){
 
 	$fContent=file_get_contents($url);
@@ -249,6 +252,120 @@ function outPutHtml($url){
 
 }
 
+function outPutHtml2($pName,$title,$des,$content){
+	
+
+	if (!file_exists($pName)){
+		mkdir ($pName,0777);
+		 
+		echo 'create '.$pName.' success.';
+	}
+	try{
+
+		
+		if($pName){
+			
+
+			$fnTitle=$pName."/"."title.html";
+			$fnDes=$pName."/"."des.html";
+			$fnContent=$pName."/"."content.html";
+			
+			
+			
+			//写入title到title.html
+			@chmod($pName, 0666 ) ;
+			$fp = fopen($fnTitle,'wb') or die("open ".$fnTitle." fail !"); 
+			
+			@flock($fp ,LOCK_EX );
+			fwrite($fp,$title) or die('write '.$fnTitle." fail !");
+			@flock($fp, LOCK_UN);
+			fclose($fp);
+			echo "write ".$fnTitle." success"."</br>";
+			
+			////写入des到des.html
+			@chmod($pName, 0666 ) ;
+			$fp = fopen($fnDes,'wb') or die("open ".$fnDes." fail !"); 
+			@flock($fp ,LOCK_EX );
+			fwrite($fp,$des) or die('write '.$fnDes." fail !");
+			@flock($fp, LOCK_UN);
+			fclose($fp);
+			echo "write ".$fnDes." success"."</br>";
+
+			//写入content到content.html
+
+			@chmod($pName, 0666 ) ;
+			$fp = fopen($fnContent,'wb') or die("open ".$fnContent." fail !"); 
+			@flock($fp ,LOCK_EX );
+			fwrite($fp,$content) or die('write '.$fnContent." fail !");
+			@flock($fp, LOCK_UN);
+			fclose($fp);
+			echo "write ".$fnContent." success"."</br>";
+
+		}
+		
+
+
+		throw new Exception("Error Processing Request", 1);
+		
+		
+	} catch (Exception $e) {
+		
+		return false;
+	}
+	
+	
+
+
+}
+//优化过的图片处理方法
+function processImg2($pName,$imgSrc,$bImgArr){
+
+	global $domain;
+
+	if (!file_exists($pName)){
+		mkdir ($pName,0777);
+		 
+		echo 'create '.$pName.' success.';
+	} else {
+		echo $pName.' exists';
+	}
+	try {
+		
+		if($imgSrc){
+			$extension=substr(strrchr($imgSrc, '.'), 1);
+			$saveName=$pName."/".$pName.".".$extension;
+			downImg($imgSrc,$saveName);
+			if($extension="png"){
+				pngToJpg($saveName,true);
+			}
+			echo "download and pngTojpg ".$saveName." finished"."</br>";
+			$allImg=$bImgArr;
+			$i=1;
+			foreach ($allImg as $key => $value) {
+				$allImgSrc=$domain.$value;
+				$extension=substr(strrchr($value, '.'), 1);
+				$saveName=$pName."/".$pName."-".$i.".".$extension;
+				downImg($allImgSrc,$saveName);
+				if($extension="png"){
+					pngToJpg($saveName,true);
+				}
+				echo "download and pngTojpg ".$saveName." finished"."</br>";
+				$i++;
+			}
+
+		}
+		
+		throw new Exception("Error Processing Request", 1);
+		
+		
+	} catch (Exception $e) {
+		
+		return false;
+	}
+	
+
+}
+
 function processImg($url,$imgSrc){
 
 	global $domain;
@@ -298,6 +415,10 @@ function processImg($url,$imgSrc){
 	
 
 }
+
+
+
+
 function getSource($url){
 	$title="";
 	$des="";
@@ -315,15 +436,19 @@ function getSource($url){
 
 	$h1=$html->find('#pro-slide h1');
 
-	foreach($h1 as $element) 
-		$title.=$element->plaintext.PHP_EOL;
+	foreach($h1 as $element) {
+		$title.=$element->plaintext;
 		$content.=mb_convert_encoding($element->outertext, 'utf-8',mb_detect_encoding($element->outertext)) .PHP_EOL;
+	}
+		
 
 	$p=$html->find('#pro-slide p');
 
-	foreach($p as $element)
-		$des.=$element->plaintext.PHP_EOL; 
+	foreach($p as $element){
+		$des.=$element->plaintext; 
 		$content.=mb_convert_encoding($element->outertext, 'utf-8',mb_detect_encoding($element->outertext)) .PHP_EOL;
+	}
+		
 
 	$imgs=$html->find('#pro-slide img');
 	$i=1;

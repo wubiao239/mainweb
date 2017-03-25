@@ -13,14 +13,20 @@ function main(){
 	for ($i=0; $i < count($allUrl); $i++) { 
 		$imgSrc=trim($allUrl[$i][0]);
 		$url=trim($allUrl[$i][1]);
+		$pName=getProductName($url);
 		
 		try {
 			$source=getSource($url);
-			print_r($source);
+			$bImgArr=$source['imgs'];
+			$title=$source['title'];
+			$des=$source['des'];
+			$content=$source['content'];
+			processImg2($pName,$imgSrc,$bImgArr);
+			outPutHtml2($pName,$title,$des,$content);
 			throw new Exception("Error Processing Request", 1);
 			
 		} catch (Exception $e) {
-			echo "url=".$url."collection fail";
+			echo 'Message: ' .$e->getMessage();
 		}
 		
 	}
