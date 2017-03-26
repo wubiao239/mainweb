@@ -2,21 +2,22 @@
 @header("Content-Type: text/html; charset=UTF-8");
 //不限执行时间
 set_time_limit(0); 
-//error_reporting(0);
+error_reporting(0);
 $fileName="caselist.txt";
 $domain="http://www.shibangchina.com";
 include_once("functions.php");
 function main(){
 	global $fileName;
+	global $domain;
 	$allUrl=getImgUrls($fileName);
 	
 	for ($i=0; $i < count($allUrl); $i++) { 
-		$imgSrc=trim($allUrl[$i][0]);
+		$imgSrc=$domain.trim($allUrl[$i][0]);
 		$url=trim($allUrl[$i][1]);
 		$pName=getProductName($url);
 		
 		try {
-			$source=getCaseSource($url);
+			$source=getCaseSource2($url);
 			if(empty($source)){
 				throw new Exception("Error Processing Request", 1);
 			}
@@ -39,8 +40,8 @@ function main(){
 }
 
 
-$source=getCaseSource("http://www.shibangchina.com/case/material/lvsekuangshan.html");
-print_r($source);
+// $source=getCaseSource("http://www.shibangchina.com/case/material/278.html");
 // print_r($source);
-//main();
+// print_r($source);
+main();
 ?>

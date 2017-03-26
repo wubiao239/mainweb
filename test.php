@@ -9,8 +9,7 @@ $domain="http://www.shibangchina.com";
 include_once("functions.php");
 
 
-
-$source=getCaseSource("http://www.shibangchina.com/case/material/278.html");
+$source=getCaseSource2("http://www.shibangchina.com/case/material/gangzhachuli.html");
 print_r($source);
 // print_r($source);
 //main();

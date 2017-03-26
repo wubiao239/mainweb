@@ -300,13 +300,13 @@ function getCaseSource($url){
 			$h=$sHtml->find('h2');
 			foreach($h as $elem) {
 				$elem=pq($elem);
-				$content.= '<h2>'.$elem->html() .'</h2>'.PHP_EOL;
+				$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
 			}
 				
 			$p=$sHtml->find('p');
 			foreach($p as $elem) {
 				$elem=pq($elem);
-				$content.= '<p>'.$elem->html().'</p>'.PHP_EOL; 
+				$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
 			}
 			$img=$sHtml->find('img');
 			foreach($img as $elem) {
@@ -329,6 +329,153 @@ function getCaseSource($url){
 }
 
 
+//处理通过$url获取case中的内容
+function getCaseSource2($url){
+	$title="";
+	$des="";
+	$content="";
+	$realImgSrc=array();
+	$pName=getProductName($url);
+
+	require_once('phpQuery/phpQuery.php');
+	$html=phpQuery::newDocumentFile($url);         
+	//获取描述内容
+	$h1=$html->find('.kuangshan_ks_banner_text h1');
+	foreach($h1 as $element){
+		$element=pq($element);
+		$title=$h1->text();
+		$content.='<h1>'.mb_convert_encoding($h1->html(), 'utf-8',mb_detect_encoding($h1->html())) .'</h1>'.PHP_EOL;
+	}
+	
+	//获取描述内容
+	$p=$html->find('.kuangshan_ks_banner_text p');
+	
+	foreach($p as $element){
+		$element=pq($element);
+		$des.=$element->html(); 
+		$content.='<p>'.mb_convert_encoding($element->html(), 'utf-8',mb_detect_encoding($element->html())).'</p>' .PHP_EOL;
+	}
+
+	//获取前半部分图片
+	$imgs=$html->find('.kuangshan_ks_banner_text img');
+	$i=1;
+	foreach($imgs as $element) {
+		$element=pq($element);
+		$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+		$realImgSrc[]=$element->attr('src'); 
+		$i++;
+	}
+
+	
+	//获取后半部分的内容和图片
+	//获取后半部分的内容和图片	
+	$newCaseContent=$html->find('#new_case_content > div');
+
+	$caseContent=$html->find('#content>div');
+	if($caseContent){
+		//echo count($contentElement);
+		$j=1;
+		foreach($caseContent as $element) {
+		
+			$sHtml=pq($element);
+
+			switch ($j) {
+				case '1':
+					$img=$sHtml->find('img');
+					foreach($img as $elem) {
+						$elem=pq($elem);
+						//$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+						$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
+						$i++;
+
+					}
+					break;
+				
+				case '2':
+					$h=$sHtml->find('h3');
+					foreach($h as $elem) {
+						$elem=pq($elem);
+						$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+					}
+						
+					$p=$sHtml->find('p');
+					foreach($p as $elem) {
+						$elem=pq($elem);
+						$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+					}
+					break;
+
+				case '3':
+					$h=$sHtml->find('h3');
+					foreach($h as $elem) {
+						$elem=pq($elem);
+						$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+					}
+						
+					$p=$sHtml->find('p');
+					foreach($p as $elem) {
+						$elem=pq($elem);
+						$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+					}
+					$img=$sHtml->find('img');
+					foreach($img as $elem) {
+						$elem=pq($elem);
+						$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+						$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
+						$i++;
+
+					}
+					break;
+						
+				
+			}
+			$j++;
+			
+
+
+		}
+
+	}
+	else if($newCaseContent){
+
+
+		foreach($newCaseContent as $element) {
+			$sHtml=pq($element);
+			//排斥客户现场
+			if(!$sHtml->hasClass('customer_site')){
+				$h=$sHtml->find('h2');
+				foreach($h as $elem) {
+					$elem=pq($elem);
+					$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+				}
+					
+				$p=$sHtml->find('p');
+				foreach($p as $elem) {
+					$elem=pq($elem);
+					$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+				}
+				$img=$sHtml->find('img');
+				foreach($img as $elem) {
+					$elem=pq($elem);
+					$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+					$realImgSrc[]=$elem->attr('src');
+					$i++;
+
+				}
+
+			}
+			
+
+
+
+		}
+
+	}
+	
+
+	return array('title'=>$title,'des'=>$des,'content'=>$content,'imgs'=>$realImgSrc);
+
+}
 //输出文件内容到title.html,des.html,content.html
 function outPutHtml2($pName,$title,$des,$content){
 	
