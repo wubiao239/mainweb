@@ -17,19 +17,24 @@ function main(){
 		
 		try {
 			$source=getProSource($url);
+			if(empty($source)){
+				throw new Exception("Error Processing Request", 1);
+			}
 			$bImgArr=$source['imgs'];
 			$title=$source['title'];
 			$des=$source['des'];
 			$content=$source['content'];
 			processImg2($pName,$imgSrc,$bImgArr);
 			outPutHtml2($pName,$title,$des,$content);
-			throw new Exception("Error Processing Request", 1);
+
+			
 			
 		} catch (Exception $e) {
 			echo 'Message: ' .$e->getMessage();
 		}
 		
 	}
+	echo $fileName." Acquisition is complete.";
 	// processImg("http://www.shibangchina.com/products/lm_mill.html","http://www.shibangchina.com/images/products/lm/lm_banner.png");
 	// outPutHtml("http://www.shibangchina.com/products/lm_mill.html");
 	

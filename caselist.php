@@ -17,13 +17,16 @@ function main(){
 		
 		try {
 			$source=getCaseSource($url);
+			if(empty($source)){
+				throw new Exception("Error Processing Request", 1);
+			}
 			$bImgArr=$source['imgs'];
 			$title=$source['title'];
 			$des=$source['des'];
 			$content=$source['content'];
 			processImg2($pName,$imgSrc,$bImgArr);
 			outPutHtml2($pName,$title,$des,$content);
-			throw new Exception("Error Processing Request", 1);
+			
 			
 		} catch (Exception $e) {
 			echo 'Message: ' .$e->getMessage();
