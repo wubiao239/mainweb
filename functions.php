@@ -477,14 +477,25 @@ function getCaseSource2($url){
 
 }
 //输出文件内容到title.html,des.html,content.html
-function outPutHtml2($pName,$title,$des,$content){
+function outPutHtml2($pName,$title,$des,$content,$dir=""){
 	
+	if(!empty($dir)){
+		$dirPName=$dir."/".$pName;
+		mkdir ($dir,0777);
+		mkdir ($dirPName,0777);
+		$pName=$dirPName;
+ 
+	}else{
+		if (!file_exists($pName)){
+			mkdir ($pName,0777);
+			 
+			echo 'create '.$pName.' success.';
+		} else {
+			echo $pName.' exists';
+		}
 
-	if (!file_exists($pName)){
-		mkdir ($pName,0777);
-		 
-		echo 'create '.$pName.' success.';
 	}
+
 	try{
 
 		
@@ -543,22 +554,31 @@ function outPutHtml2($pName,$title,$des,$content){
 
 }
 //优化过的图片处理方法
-function processImg2($pName,$imgSrc,$bImgArr){
+function processImg2($pName,$imgSrc,$bImgArr,$dir=""){
 
 	global $domain;
+	if(!empty($dir)){
+		$dirPName=$dir."/".$pName;
+		mkdir ($dir,0777);
+		mkdir ($dirPName,0777);
+ 
+	}else{
+		if (!file_exists($pName)){
+			mkdir ($pName,0777);
+			 
+			echo 'create '.$pName.' success.';
+		} else {
+			echo $pName.' exists';
+		}
 
-	if (!file_exists($pName)){
-		mkdir ($pName,0777);
-		 
-		echo 'create '.$pName.' success.';
-	} else {
-		echo $pName.' exists';
 	}
+
+	
 	try {
 		
 		if($imgSrc){
 			$extension=substr(strrchr($imgSrc, '.'), 1);
-			$saveName=$pName."/".$pName.".".$extension;
+			$saveName=$dirPName."/".$pName.".".$extension;
 			downImg($imgSrc,$saveName);
 			if($extension="png"){
 				pngToJpg($saveName,true);
@@ -569,7 +589,7 @@ function processImg2($pName,$imgSrc,$bImgArr){
 			foreach ($allImg as $key => $value) {
 				$allImgSrc=$domain.$value;
 				$extension=substr(strrchr($value, '.'), 1);
-				$saveName=$pName."/".$pName."-".$i.".".$extension;
+				$saveName=$dirPName."/".$pName."-".$i.".".$extension;
 				downImg($allImgSrc,$saveName);
 				if($extension="png"){
 					pngToJpg($saveName,true);

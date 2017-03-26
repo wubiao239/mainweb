@@ -2,7 +2,7 @@
 @header("Content-Type: text/html; charset=UTF-8");
 //不限执行时间
 set_time_limit(0); 
-error_reporting(0);
+//error_reporting(0);
 $fileName="caselist.txt";
 $domain="http://www.shibangchina.com";
 include_once("functions.php");
@@ -25,8 +25,8 @@ function main(){
 			$title=$source['title'];
 			$des=$source['des'];
 			$content=$source['content'];
-			processImg2($pName,$imgSrc,$bImgArr);
-			outPutHtml2($pName,$title,$des,$content);
+			processImg2($pName,$imgSrc,$bImgArr,"material");
+			outPutHtml2($pName,$title,$des,$content,"material");
 			
 			
 		} catch (Exception $e) {

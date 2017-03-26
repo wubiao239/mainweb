@@ -3,7 +3,6 @@ http://www.shibangchina.com/images/products/vsi6x/vsi6x1.png	http://www.shibangc
 http://www.shibangchina.com/images/products/f5x/f5x1.png	http://www.shibangchina.com/products/f5x.html
 http://www.shibangchina.com/images/products/ci5x/ci5x1.png	http://www.shibangchina.com/products/ci5x.html
 http://www.shibangchina.com/images/products/c6x/c6x1.png	http://www.shibangchina.com/products/c6x.html
-http://www.shibangchina.com/images/products/vsi5x/vsi5x1.png	http://www.shibangchina.com/products/mc.html
 http://www.shibangchina.com/images/products/scm/scm_banner.png	http://www.shibangchina.com/products/scm_mill.html
 http://www.shibangchina.com/images/products/zonghe/u5052.png	http://www.shibangchina.com/products/mtw_mill.html
 http://www.shibangchina.com/images/products/mtm/1.png	http://www.shibangchina.com/products/mtm_mill.html
@@ -28,3 +27,4 @@ http://www.shibangchina.com/images/products/pew/pew2.png	http://www.shibangchina
 http://www.shibangchina.com/images/products/pe/pe1.png	http://www.shibangchina.com/products/pe.html
 http://www.shibangchina.com/images/products/hst/hst2.png	http://www.shibangchina.com/products/hst.html
 http://www.shibangchina.com/images/products/hpt/2.png	http://www.shibangchina.com/products/hp.html	
+http://www.shibangchina.com/images/products/vsi5x/vsi5x1.png	http://www.shibangchina.com/products/mc.html
