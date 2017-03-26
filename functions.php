@@ -563,9 +563,10 @@ function processImg2($pName,$imgSrc,$bImgArr,$dir=""){
 		mkdir ($dirPName,0777);
  
 	}else{
+		$dirPName=$pName;
 		if (!file_exists($pName)){
 			mkdir ($pName,0777);
-			 
+			
 			echo 'create '.$pName.' success.';
 		} else {
 			echo $pName.' exists';
