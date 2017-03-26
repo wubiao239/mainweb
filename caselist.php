@@ -3,7 +3,7 @@
 //不限执行时间
 set_time_limit(0); 
 //error_reporting(0);
-$fileName="prolist.txt";
+$fileName="caselist.txt";
 $domain="http://www.shibangchina.com";
 include_once("functions.php");
 function main(){
@@ -16,7 +16,7 @@ function main(){
 		$pName=getProductName($url);
 		
 		try {
-			$source=getProSource($url);
+			$source=getCaseSource($url);
 			$bImgArr=$source['imgs'];
 			$title=$source['title'];
 			$des=$source['des'];
@@ -36,7 +36,8 @@ function main(){
 }
 
 
-// $source=getSource("http://www.shibangchina.com/products/mb5x.html");
+$source=getCaseSource("http://www.shibangchina.com/case/material/lvsekuangshan.html");
+print_r($source);
 // print_r($source);
-main();
+//main();
 ?>

@@ -1,6 +1,7 @@
 <?php
-@header("Content-Type: text/html; charset=UTF-8");
-error_reporting(0);
+// @header("Content-Type: text/html; charset=UTF-8");
+// error_reporting(0);
+//通用方法
 //从txt中获取图片地址和采集页网址
 function getImgUrls($fileName){
 	$lineArray=array();
@@ -70,6 +71,7 @@ function downImg($url, $saveName)
 	fclose($in);
 	fclose($out);
 }
+
 
 //获取网页中的banner标题描述和图片
 //舍弃的方法getSource()优化效果更好
@@ -251,7 +253,83 @@ function outPutHtml($url){
 
 
 }
+//处理通过$url获取case中的内容
+function getCaseSource($url){
+	$title="";
+	$des="";
+	$content="";
+	$realImgSrc=array();
+	$pName=getProductName($url);
 
+	require_once('phpQuery/phpQuery.php');
+	$html=phpQuery::newDocumentFile($url);         
+	//获取描述内容
+	$h1=$html->find('.kuangshan_ks_banner_text h1');
+	foreach($h1 as $element){
+		$element=pq($element);
+		$title=$h1->text();
+		$content.='<h1>'.mb_convert_encoding($h1->html(), 'utf-8',mb_detect_encoding($h1->html())) .'</h1>'.PHP_EOL;
+	}
+	
+	//获取描述内容
+	$p=$html->find('.kuangshan_ks_banner_text p');
+	
+	foreach($p as $element){
+		$element=pq($element);
+		$des.=$element->text(); 
+		$content.='<p>'.mb_convert_encoding($element->html(), 'utf-8',mb_detect_encoding($element->html())).'</p>' .PHP_EOL;
+	}
+
+	//获取前半部分图片
+	$imgs=$html->find('.kuangshan_ks_banner_text img');
+	$i=1;
+	foreach($imgs as $element) {
+		$element=pq($element);
+		$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+		$realImgSrc[]=$element->attr('src'); 
+		$i++;
+	}
+
+	//获取后半部分的内容和图片	
+	$newCaseContent=$html->find('#new_case_content > div');
+
+	foreach($newCaseContent as $element) {
+		$sHtml=pq($element);
+		//排斥客户现场
+		if(!$sHtml->hasClass('customer_site')){
+			$h=$sHtml->find('h2');
+			foreach($h as $elem) {
+				$elem=pq($elem);
+				$content.= '<h2>'.$elem->html() .'</h2>'.PHP_EOL;
+			}
+				
+			$p=$sHtml->find('p');
+			foreach($p as $elem) {
+				$elem=pq($elem);
+				$content.= '<p>'.$elem->html().'</p>'.PHP_EOL; 
+			}
+			$img=$sHtml->find('img');
+			foreach($img as $elem) {
+				$elem=pq($elem);
+				$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+				$realImgSrc[]=$elem->attr('src');
+				$i++;
+
+			}
+
+		}
+		
+
+
+
+	}
+
+	return array('title'=>$title,'des'=>$des,'content'=>$content,'imgs'=>$realImgSrc);
+
+}
+
+
+//输出文件内容到title.html,des.html,content.html
 function outPutHtml2($pName,$title,$des,$content){
 	
 
@@ -419,7 +497,7 @@ function processImg($url,$imgSrc){
 
 
 
-function getSource($url){
+function getProSource($url){
 	$title="";
 	$des="";
 	$content="";
