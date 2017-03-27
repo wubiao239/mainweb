@@ -2,7 +2,7 @@
 @header("Content-Type: text/html; charset=UTF-8");
 //不限执行时间
 set_time_limit(0); 
-//error_reporting(0);
+error_reporting(0);
 $fileName="caselist.txt";
 $domain="http://www.shibangchina.com";
 include_once("functions.php");
@@ -35,14 +35,10 @@ function main(){
 		
 	}
 	echo $fileName."download finished";
-	// processImg("http://www.shibangchina.com/products/lm_mill.html","http://www.shibangchina.com/images/products/lm/lm_banner.png");
-	// outPutHtml("http://www.shibangchina.com/products/lm_mill.html");
+	
 	
 }
 
 
-// $source=getCaseSource("http://www.shibangchina.com/case/material/278.html");
-// print_r($source);
-// print_r($source);
 main();
 ?>

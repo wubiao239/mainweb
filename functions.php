@@ -60,16 +60,22 @@ function getProductName($url){
 function downImg($url, $saveName)
 {
 	$in= fopen($url, "rb");
-	if(file_exists($saveName)){
-		unlink($saveName);
+	if($in){
+		if(file_exists($saveName)){
+			unlink($saveName);
+		}
+		$out= fopen($saveName, "wb");
+		while ($chunk = fread($in,8192))
+		{
+			fwrite($out, $chunk, 8192);
+		}
+		fclose($in);
+		fclose($out);
+
+	}else{
+		echo "download ".$url." falil".'</br>'.PHP_EOL;
 	}
-	$out=   fopen($saveName, "wb");
-	while ($chunk = fread($in,8192))
-	{
-		fwrite($out, $chunk, 8192);
-	}
-	fclose($in);
-	fclose($out);
+	
 }
 
 
@@ -170,7 +176,7 @@ function outPutHtml($url){
 
 	if (!file_exists($pName)){
 		mkdir ($pName,0777);
-		 
+
 		echo 'create '.$pName.' success.';
 	}
 	try{
@@ -302,7 +308,7 @@ function getCaseSource($url){
 				$elem=pq($elem);
 				$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
 			}
-				
+
 			$p=$sHtml->find('p');
 			foreach($p as $elem) {
 				$elem=pq($elem);
@@ -376,72 +382,72 @@ function getCaseSource2($url){
 		//echo count($contentElement);
 		$j=1;
 		foreach($caseContent as $element) {
-		
+
 			$sHtml=pq($element);
 
 			switch ($j) {
 				case '1':
-					$img=$sHtml->find('img');
-					if(count($img)){
-						foreach($img as $elem) {
-							$elem=pq($elem);
+				$img=$sHtml->find('img');
+				if(count($img)){
+					foreach($img as $elem) {
+						$elem=pq($elem);
 							//$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
-							$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
-							$i++;
+						$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
+						$i++;
 
-						}
 					}
-					break;
+				}
+				break;
 				
 				case '2':
-					$h=$sHtml->find('h3');
-					if(count($h)){
-						foreach($h as $elem) {
-							$elem=pq($elem);
-							$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
-						}
+				$h=$sHtml->find('h3');
+				if(count($h)){
+					foreach($h as $elem) {
+						$elem=pq($elem);
+						$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
 					}
-					$p=$sHtml->find('p');
-					if(count($p)){
-						foreach($p as $elem) {
-							$elem=pq($elem);
-							$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
-						}
+				}
+				$p=$sHtml->find('p');
+				if(count($p)){
+					foreach($p as $elem) {
+						$elem=pq($elem);
+						$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
 					}
-					break;
+				}
+				break;
 
 				case '3':
-					$h=$sHtml->find('h3');
-					if(count($h)){
-						foreach($h as $elem) {
-							$elem=pq($elem);
-							$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
-						}
+				$h=$sHtml->find('h3');
+				if(count($h)){
+					foreach($h as $elem) {
+						$elem=pq($elem);
+						$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+					}
+
+				}
+
+
+				$p=$sHtml->find('p');
+				if(count($p)){
+					foreach($p as $elem) {
+						$elem=pq($elem);
+						$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+					}
+				}
+
+				$img=$sHtml->find('img');
+				if(count($img)){
+					foreach($img as $elem) {
+						$elem=pq($elem);
+						$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+						$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
+						$i++;
 
 					}
-					
-						
-					$p=$sHtml->find('p');
-					if(count($p)){
-						foreach($p as $elem) {
-							$elem=pq($elem);
-							$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
-						}
-					}
-					
-					$img=$sHtml->find('img');
-					if(count($img)){
-						foreach($img as $elem) {
-							$elem=pq($elem);
-							$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
-							$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
-							$i++;
+				}
 
-						}
-					}
-					
-					break;
-						
+				break;
+
 				
 			}
 			$j++;
@@ -479,7 +485,7 @@ function getCaseSource2($url){
 				$elem=pq($elem);
 				$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
 			}
-				
+
 			$h3=$sHtml->find('h3');
 			if(count($h3)){
 				foreach($h3 as $elem) {
@@ -526,11 +532,11 @@ function outPutHtml2($pName,$title,$des,$content,$dir=""){
 		mkdir ($dir,0777);
 		mkdir ($dirPName,0777);
 		$pName=$dirPName;
- 
+
 	}else{
 		if (!file_exists($pName)){
 			mkdir ($pName,0777);
-			 
+
 			echo 'create '.$pName.' success.';
 		} else {
 			echo $pName.' exists';
@@ -603,7 +609,7 @@ function processImg2($pName,$imgSrc,$bImgArr,$dir=""){
 		$dirPName=$dir."/".$pName;
 		mkdir ($dir,0777);
 		mkdir ($dirPName,0777);
- 
+
 	}else{
 		$dirPName=$pName;
 		if (!file_exists($pName)){
@@ -632,7 +638,7 @@ function processImg2($pName,$imgSrc,$bImgArr,$dir=""){
 			foreach ($allImg as $key => $value) {
 				$value=trim($value);
 
-				echo $value;
+				//echo $value;
 				if(stripos($value,"static.shibangchina.com")){
 					
 					$allImgSrc=$value;
@@ -672,7 +678,7 @@ function processImg($url,$imgSrc){
 
 	if (!file_exists($pName)){
 		mkdir ($pName,0777);
-		 
+
 		echo 'create '.$pName.' success.';
 	} else {
 		echo $pName.' exists';
@@ -739,7 +745,7 @@ function getProSource($url){
 		$title.=$element->plaintext;
 		$content.=mb_convert_encoding($element->outertext, 'utf-8',mb_detect_encoding($element->outertext)) .PHP_EOL;
 	}
-		
+
 
 	$p=$html->find('#pro-slide p');
 
@@ -757,7 +763,7 @@ function getProSource($url){
 		$realImgSrc[]=$element->src; 
 		$i++;
 	}
-		  
+
 
 	$proDetail=$html->find('.pro-detail');
 
@@ -782,7 +788,7 @@ function getProSource($url){
 			$i++;
 
 		}
-			
+
 
 
 	}
