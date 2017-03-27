@@ -355,7 +355,7 @@ function getCaseSource2($url){
 		$des.=$element->html(); 
 		$content.='<p>'.mb_convert_encoding($element->html(), 'utf-8',mb_detect_encoding($element->html())).'</p>' .PHP_EOL;
 	}
-
+	$content.=PHP_EOL;
 	//获取前半部分图片
 	$imgs=$html->find('.kuangshan_ks_banner_text img');
 	$i=1;
@@ -372,7 +372,7 @@ function getCaseSource2($url){
 	$newCaseContent=$html->find('#new_case_content > div');
 
 	$caseContent=$html->find('#content>div');
-	if($caseContent){
+	if(count($caseContent)){
 		//echo count($contentElement);
 		$j=1;
 		foreach($caseContent as $element) {
@@ -382,49 +382,64 @@ function getCaseSource2($url){
 			switch ($j) {
 				case '1':
 					$img=$sHtml->find('img');
-					foreach($img as $elem) {
-						$elem=pq($elem);
-						//$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
-						$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
-						$i++;
+					if(count($img)){
+						foreach($img as $elem) {
+							$elem=pq($elem);
+							//$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+							$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
+							$i++;
 
+						}
 					}
 					break;
 				
 				case '2':
 					$h=$sHtml->find('h3');
-					foreach($h as $elem) {
-						$elem=pq($elem);
-						$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+					if(count($h)){
+						foreach($h as $elem) {
+							$elem=pq($elem);
+							$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+						}
 					}
-						
 					$p=$sHtml->find('p');
-					foreach($p as $elem) {
-						$elem=pq($elem);
-						$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+					if(count($p)){
+						foreach($p as $elem) {
+							$elem=pq($elem);
+							$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+						}
 					}
 					break;
 
 				case '3':
 					$h=$sHtml->find('h3');
-					foreach($h as $elem) {
-						$elem=pq($elem);
-						$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
-					}
-						
-					$p=$sHtml->find('p');
-					foreach($p as $elem) {
-						$elem=pq($elem);
-						$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
-					}
-					$img=$sHtml->find('img');
-					foreach($img as $elem) {
-						$elem=pq($elem);
-						$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
-						$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
-						$i++;
+					if(count($h)){
+						foreach($h as $elem) {
+							$elem=pq($elem);
+							$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+						}
 
 					}
+					
+						
+					$p=$sHtml->find('p');
+					if(count($p)){
+						foreach($p as $elem) {
+							$elem=pq($elem);
+							$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+						}
+					}
+					
+					$img=$sHtml->find('img');
+					if(count($img)){
+						foreach($img as $elem) {
+							$elem=pq($elem);
+							$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+							$realImgSrc[]=str_replace("../../", "/", $elem->attr('src'));
+							$i++;
+
+						}
+					}
+					
 					break;
 						
 				
@@ -436,25 +451,53 @@ function getCaseSource2($url){
 		}
 
 	}
-	else if($newCaseContent){
+	else if(count($newCaseContent)){
 
 
 		foreach($newCaseContent as $element) {
 			$sHtml=pq($element);
-			//排斥客户现场
-			if(!$sHtml->hasClass('customer_site')){
-				$h=$sHtml->find('h2');
-				foreach($h as $elem) {
-					$elem=pq($elem);
-					$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+			//排斥客户现场related_case
+			if($sHtml->hasClass('customer_site')){
+				$img=$sHtml->find('img');
+				if(count($img)){
+					foreach($img as $elem) {
+						$elem=pq($elem);
+						//$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
+						$realImgSrc[]=$elem->attr('src');
+						$i++;
+
+					}
+
 				}
-					
-				$p=$sHtml->find('p');
+				continue;
+			}
+			if($sHtml->hasClass('related_case')){
+				continue;
+			}
+			$h2=$sHtml->find('h2');
+			foreach($h2 as $elem) {
+				$elem=pq($elem);
+				$content.= '<h1>'.$elem->text() .'</h1>'.PHP_EOL;
+			}
+				
+			$h3=$sHtml->find('h3');
+			if(count($h3)){
+				foreach($h3 as $elem) {
+					$elem=pq($elem);
+					$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
+				}
+			}
+
+			$p=$sHtml->find('p');
+			if(count($p)){
 				foreach($p as $elem) {
 					$elem=pq($elem);
 					$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
 				}
-				$img=$sHtml->find('img');
+			}
+			
+			$img=$sHtml->find('img');
+			if(count($img)){
 				foreach($img as $elem) {
 					$elem=pq($elem);
 					$content.="<p><img src=\"/images/{$pName}/{$pName}-{$i}.jpg\" alt=\"{$pName}-{$i}\" /></p>".PHP_EOL;
@@ -464,7 +507,6 @@ function getCaseSource2($url){
 				}
 
 			}
-			
 
 
 
@@ -588,9 +630,20 @@ function processImg2($pName,$imgSrc,$bImgArr,$dir=""){
 			$allImg=$bImgArr;
 			$i=1;
 			foreach ($allImg as $key => $value) {
-				$allImgSrc=$domain.$value;
+				$value=trim($value);
+
+				echo $value;
+				if(stripos($value,"static.shibangchina.com")){
+					
+					$allImgSrc=$value;
+					
+				}else{
+					$allImgSrc=$domain.$value;
+				}
+				
 				$extension=substr(strrchr($value, '.'), 1);
 				$saveName=$dirPName."/".$pName."-".$i.".".$extension;
+				
 				downImg($allImgSrc,$saveName);
 				if($extension="png"){
 					pngToJpg($saveName,true);
@@ -694,7 +747,7 @@ function getProSource($url){
 		$des.=$element->plaintext; 
 		$content.=mb_convert_encoding($element->outertext, 'utf-8',mb_detect_encoding($element->outertext)) .PHP_EOL;
 	}
-		
+	$content.=PHP_EOL;	
 
 	$imgs=$html->find('#pro-slide img');
 	$i=1;

@@ -34,6 +34,7 @@ function main(){
 		}
 		
 	}
+	echo $fileName."download finished";
 	// processImg("http://www.shibangchina.com/products/lm_mill.html","http://www.shibangchina.com/images/products/lm/lm_banner.png");
 	// outPutHtml("http://www.shibangchina.com/products/lm_mill.html");
 	
