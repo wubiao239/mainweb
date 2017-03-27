@@ -167,7 +167,7 @@ function getContentImg($url){
 
 }
 
-
+//舍弃方法outputhtml2()处理效果更好
 function outPutHtml($url){
 	
 	$content="";
@@ -260,6 +260,7 @@ function outPutHtml($url){
 
 }
 //处理通过$url获取case中的内容
+// 舍弃方法getCaseSource2 通用性更强
 function getCaseSource($url){
 	$title="";
 	$des="";
@@ -301,7 +302,7 @@ function getCaseSource($url){
 
 	foreach($newCaseContent as $element) {
 		$sHtml=pq($element);
-		//排斥客户现场
+		//排除客户现场
 		if(!$sHtml->hasClass('customer_site')){
 			$h=$sHtml->find('h2');
 			foreach($h as $elem) {
@@ -411,6 +412,7 @@ function getCaseSource2($url){
 				if(count($p)){
 					foreach($p as $elem) {
 						$elem=pq($elem);
+						if($elem->text()!=" ")
 						$content.= '<p>'.$elem->text().'</p>'.PHP_EOL; 
 					}
 				}
