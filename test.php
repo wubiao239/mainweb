@@ -45,19 +45,28 @@ function expandlinks($links,$url)
 		$expandedLinks[] = preg_replace($search,$replace,$value);
 	}		
 	
-
+	$expandedLinks=array_unrepeat($expandedLinks);
 	return $expandedLinks;
 }
+//去掉重复项并把数组重新排列
+function array_unrepeat($input){
+    $input = array_unique($input);
+    $keys = array();
+    for($i=0;$i<count($input);$i++){
+        $keys[$i] = $i;
+    }
+    return  array_combine($keys, $input);
+} 
 
 function striplinks($document)
 {	
-	preg_match_all("~<\s*a\s.*?href\s*=\s*			# 查找 <a href=
-					([\"\'])?					# 查找单双引号
+	preg_match_all("~<\s*a\s.*?href\s*=\s*			# find <a href=
+					([\"\'])?					# find single or double quote
 					(?(1) (.*?)\\1 | ([^\s\>]+))		# if quote found, match up to next matching
 												# quote, otherwise match up to next space
 					~isx",$document,$links);
 					
-
+	print_r($links);
 	while(list($key,$val) = each($links[2]))
 	{
 		if(!empty($val))
