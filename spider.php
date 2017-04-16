@@ -2,9 +2,9 @@
 @header("Content-Type: text/html; charset=UTF-8");
 //不限执行时间
 set_time_limit(0); 
-error_reporting(0);
+//error_reporting(0);
 $domain="";
-$pendingurls=array();
+//$pendingurls=array();
 $urls=array();
 
 /**
@@ -14,17 +14,25 @@ $urls=array();
  */
 function fetchlinks($url)
 {	
+	global $urls;
 
 	$links=array();
+	$pendingLinks=array();
 	if ($content=file_get_contents($url))
-	{			
+	{	
+		array_push($urls,$url);		
 		$links= striplinks($content);
 		$links= expandlinks($links, $url);
+		foreach ($links as $key => $value) {
+			if(array_search($value, $urls)===false){
+				array_push($pendingLinks, $value);
+			}
+		}
 
-		return $links;
+		return $pendingLinks;
 	}
 	else
-		return false;
+		return array();
 }
 
 /**
@@ -52,12 +60,14 @@ function expandlinks($links,$url)
 						"~/\./~",
 						"~/[^\/]+/\.\./~",
 						"~/index\.html~",
-						"~/#.*~"
+						"~/#.*~",
+						"~/cdn-cgi.*~"
 					);
 					
 	$replace = array(	"",
 						$match_root."/",
 						$match."/",
+						"/",
 						"/",
 						"/",
 						"/",
@@ -70,11 +80,17 @@ function expandlinks($links,$url)
 	
 	$expandedLinks=array_unique($expandedLinks);
 	foreach ($expandedLinks as $key => $value) {
-		$check=get_headers($value,1);
+		// $check=get_headers($value,1);
 		
-		if(stripos($value, $domain)===false||$check[0]!='HTTP/1.1 200 OK'){
+		// if(stripos($value, $domain)===false||$check[0]!='HTTP/1.1 200 OK'){
+		// 	unset($expandedLinks[$key]);
+		// }
+
+		
+		if(stripos($value, $domain)===false){
 			unset($expandedLinks[$key]);
 		}
+
 	}
 	$expandedLinks=array_unrepeat($expandedLinks);
 	return $expandedLinks;
@@ -114,16 +130,26 @@ function striplinks($document)
 }
 
 
-function getSiteLinks($url,$depth=2) 
+function getSiteLinks($urlArry,$depth=2) 
 { 	
 	global $urls;
-	$urls=fetchlinks($url);
+	if(empty($urlArry)){
 		
-	return $urls; 
+		return;
+	}
+	$urls=array_merge($urls,$urlArry);
+	
+	foreach ($urlArry as $key => $value) {
+		echo $value.PHP_EOL;
+		$pendingUrls=fetchlinks($value);
+		getSiteLinks($pendingUrls);
+	}
 } 
 
 
-$hrefs=getSiteLinks("http://www.purefluidmagic.pw");
+$hrefs=fetchlinks("http://wubiao.site/");
+getSiteLinks($hrefs);
+print_r($hrefs);
 print_r($urls);
 
 ?>
