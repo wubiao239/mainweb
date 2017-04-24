@@ -20,11 +20,13 @@ function fetchlinks($url)
 	$pendingLinks=array();
 	if ($content=file_get_contents($url))
 	{	
-		array_push($urls,$url);		
+		if(array_search($url, $urls)===false)
+			array_push($urls,$url);		
 		$links= striplinks($content);
 		$links= expandlinks($links, $url);
 		foreach ($links as $key => $value) {
 			if(array_search($value, $urls)===false){
+				echo $value.PHP_EOL;
 				array_push($pendingLinks, $value);
 			}
 		}
@@ -140,16 +142,15 @@ function getSiteLinks($urlArry,$depth=2)
 	$urls=array_merge($urls,$urlArry);
 	
 	foreach ($urlArry as $key => $value) {
-		echo $value.PHP_EOL;
+		//echo $value.PHP_EOL;
 		$pendingUrls=fetchlinks($value);
 		getSiteLinks($pendingUrls);
 	}
 } 
 
 
-$hrefs=fetchlinks("http://wubiao.site/");
+$hrefs=fetchlinks("http://www.galacticsun.pw/");
 getSiteLinks($hrefs);
-print_r($hrefs);
 print_r($urls);
 
 ?>
