@@ -22,7 +22,7 @@ class MysqlDB
     private function __clone() {}
     
    
-    public static function getInstance($dbHost='127.0.0.1', $dbName='test',$dbUser='root', $dbPasswd='', $dbCharset='utf-8')
+    public static function getInstance($dbHost='127.0.0.1', $dbName='test',$dbUser='root', $dbPasswd='', $dbCharset='utf8')
     {
         if (self::$_instance === null) {
             self::$_instance = new self($dbHost, $dbName,$dbUser, $dbPasswd, $dbCharset);
@@ -104,7 +104,7 @@ class MysqlDB
         return $result;
     }
 
-    public function destruct()
+    public function close()
     {
         $this->pdo = null;
     }
