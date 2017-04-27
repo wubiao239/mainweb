@@ -31,16 +31,16 @@ $db = MysqlDB::getInstance('127.0.0.1', 'empirecms', 'root');
 // $data = $db->fetch("phome_ecms_products", "Row");
 // $classid = $data['classid'];
 
-$classid = 62;
+$classid = 65;
 
-$path = "./finished/aggregate/material/";
+$path = "./finished/material/";
 $dirs = listDir($path);
 //print_r($dirs);
 
 foreach ($dirs as $key => $value) {
     //if($key >= 1) break;
     $allpath = $path . $value;
-    $title = file_get_contents($allpath . '/' . 'title.html');
+    $title = file_get_contents($allpath . '/' . 'title.html') or die("读取失败".$allpath . '/' . 'title.html');
     $des = file_get_contents($allpath . '/' . 'des.html');
     $content = file_get_contents($allpath . '/' . 'content.html');
     //产品数据表中字段
@@ -67,7 +67,7 @@ foreach ($dirs as $key => $value) {
         "groupid" => 0,
         "userfen" => 0,
         "titlefont" => "",
-        "titleurl" => "/case/aggregate/{$value}.html",
+        "titleurl" => "/case/material/{$value}.html",
         "stb" => 1,
         "fstb" => 1,
         "restb" => 1,
@@ -83,8 +83,9 @@ foreach ($dirs as $key => $value) {
     );
     $data = $db->insert("phome_ecms_cases", $profield);
 
-    $re = $db->query("select * from phome_ecms_cases where title='{$title}'");
+    $re = $db->query("select * from phome_ecms_cases order by id desc limit 1");
     $result=$re->fetch();
+
     $id=$result['id'];
     
     //产品数据分表中字段
