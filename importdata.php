@@ -81,7 +81,7 @@ foreach ($dirs as $key => $value) {
     );
     $data = $db->insert("phome_ecms_products", $profield);
 
-    $re = $db->query("select * from phome_ecms_products order by id desc limit 1");
+    $re = $db->query("select * from phome_ecms_products where title='{$title}'");
     $result=$re->fetch();
     $id=$result['id'];
     
