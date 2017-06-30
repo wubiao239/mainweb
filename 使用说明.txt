@@ -1,4 +1,6 @@
+php版本5.3
 ++++++++++++++++++++++++++++++++++++++++++++++
+
 采集产品页
 1.处理prolist.txt文件使用prolist.php文件
 2.prolist.txt与prolist.php在同一目录下处理

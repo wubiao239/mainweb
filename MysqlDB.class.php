@@ -31,9 +31,14 @@ class MysqlDB
     }
     
   
-    public function fetch($table, $queryMode = 'All')
+    public function fetch($table, $where="",$queryMode = 'All')
     {
-        $strSql='select * from '.$table;
+        if(!empty($where)){
+            $strSql='select * from '.$table.' '.$where;
+        }else{
+            $strSql='select * from '.$table;
+        }
+        
         $recordset = $this->pdo->query( $strSql);
        
         if ($recordset) {

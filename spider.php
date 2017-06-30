@@ -149,7 +149,7 @@ function getSiteLinks($urlArry)
 } 
 
 
-$hrefs=fetchlinks("http://www.galacticsun.pw/");
+$hrefs=fetchlinks("http://sparepart.sbmchina.com/");
 getSiteLinks($hrefs);
 print_r($urls);
 
