@@ -1,0 +1,18 @@
+﻿In the crushing of the three crusher crusher counterattack plate
+
+
+
+
+The same time as the above-
+Figure 2 crushing crusher, the machine has three broken line counterattack plate. Its discharge mouth is small, β angle is also smaller, so the counterattack plate and involute from the closer. The second paragraph of the counterattack plate closer to the involute, from the A point of the material out of the projection, basically with the first paragraph counterattack plate was vertical, δ ≈ 2 °. When the hammer is about 20 °, the direction of the material being ejected is collided with the second counterattack plate. When the hammer is rotated by about 40 °, the material is projected in the direction of the project.
+The same time as the above-
+The same time as the above-
+According to the actual wear situation of the counterattack plate, we can see that the crushing chamber is from the point of view of the point of attack on the point of attack. The section is the important broken section of the material, especially in the vicinity of the counter-plate discharge port. In addition to the above analysis is not difficult to find the polyline counterattack plate design method: for the two ends of the counterattack plate, according to δ = 0 ° and feed port size B layout of the first paragraph counterattack plate. From the A point hammer hammer 25 °, then go to δ = 0 °, and taking into account the first level counterattack plate minimum discharge port size e = 0.1D and θ = 15 ° and γ = 60 ° can determine the second The position of the counterattack plate.
+The same time as the above-
+The same time as the above-
+The same time as the above-
+The same time as the above-
+In the second quarter, the method of determining the position of the counterattack plate is that the first horizontal line is perpendicular to the second counterattack plate and the second stage counterattack plate has the smallest discharge port size e = 0.01D can determine the location of the second level counterattack plate.
+The same time as the above-
+The same time as the above-
+For the three-stage counterattack plate, the first stage counterattack plate is arranged according to the δ = 0 ° feed port size B. Plate hammer to turn the 20 °, then take δ = 0 °, layout of the second paragraph counterattack plate. The hammer is rotated by about 40 °, and then the point δ = 0 ° and the third stage counterattack plate is arranged with e and θ = 19 °. The second stage counterattack plate of the second stage counterplate is determined according to γ ​​≈ 73 °. The position of the third counterattack plate can be determined according to the discharge port size e = 0.01D and θ = 66 ° ˉ 77 °. If the conditions permit, the value of the middle fine crusher should be larger To improve product quality. Polyline counterattack plate structure is simple, easy to manufacture.

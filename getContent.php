@@ -60,7 +60,7 @@ function getSource($url){
 
 
 
-$urls=getUrls("urls/es_url.log");
+$urls=getUrls("urls/ar_url.log");
 
 foreach ($urls as $url) {
 	$content=getSource($url);
