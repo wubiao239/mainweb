@@ -62,7 +62,7 @@ function getSource($url){
 	                    ""
 	                                       
 	                                );                        
-	//去除样式，去除后效果不是太好不用处理
+	
 	$content = preg_replace($search,$replace,$content);
 	$content=mb_convert_encoding($content, 'utf-8',mb_detect_encoding($content));    
 	$title=mb_convert_encoding($title, 'utf-8',mb_detect_encoding($title));
