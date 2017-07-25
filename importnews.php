@@ -2,7 +2,7 @@
 
 include_once ('MysqlDB.class.php');
 include_once("getSource.php");
-$db = MysqlDB::getInstance('127.0.0.1', 'multilang.sbmchina.com', 'root','shibang416');
+$db = MysqlDB::getInstance('127.0.0.1', 'empirecms', 'root','');
 
 //$data = $db->fetch("phome_ecms_news_index"," WHERE id =655");
 
@@ -12,24 +12,26 @@ $db = MysqlDB::getInstance('127.0.0.1', 'multilang.sbmchina.com', 'root','shiban
 
 $urls=getUrls("urls/ar_url.log");
 //
-$filename=298;
+$filename=600;
 foreach ($urls as $url) {
 
 	$source=getSource($url);
+	//print_r($source);
 	$title = $source['title'];
 	$time = $source['time'];
+	$time=strtotime("2012-12-10");
 	$content = $source['content'];
 	//产品数据表中字段
 	$newsfield = array(
-	    "classid" => 88,
+	    "classid" => 34,
 	    "ttid" => 0,
 	    "onclick" => 0,
 	    "plnum" => 0,
 	    "totaldown" => 0,
-	    "newspath" => "",
+	    "newspath" => "2012-12-10",
 	    "filename" => $filename,
 	    "userid" => 1,
-	    "username" =>"超管",
+	    "username" =>"admin",
 	    "firsttitle" => 0,
 	    "isgood" => 0,
 	    "ispic" => 0,
@@ -43,7 +45,7 @@ foreach ($urls as $url) {
 	    "groupid" => 0,
 	    "userfen" => 0,
 	    "titlefont" => "",
-	    "titleurl" => "http://ar.sbmchina.com/media/news/{$filename}.html",
+	    "titleurl" => "/news/china/2012-12-10/{$filename}.html",
 	    "stb" => 1,
 	    "fstb" => 1,
 	    "restb" => 1,
@@ -54,10 +56,7 @@ foreach ($urls as $url) {
 	    "ftitle" => "",
 	    "smalltext" => $title,
 	    "diggtop" => 0,
-	    "relatedmachine" => "",
-	    "relatedinfo" => "",
-	    "classname"=>"",
-	    "tags"=>""
+	    
 	);
 	$data = $db->insert("phome_ecms_news", $newsfield);
 	echo "insert phome_ecms_news success".PHP_EOL;
@@ -71,7 +70,7 @@ foreach ($urls as $url) {
 	    "classid" => $classid,
 	    "keyid" =>"",
 	    "dokey" => 1,
-	    "newstempid" => 0,
+	    "newstempid" => 10,
 	    "closepl" => 0,
 	    "haveaddfen" => 0,
 	    "infotags" =>"" ,
