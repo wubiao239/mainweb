@@ -4,7 +4,7 @@
 // @description 油猴脚本采集主站后台的产品和链接
 // @namespace   http://wubiao.site
 // @encoding    utf-8
-// @include     http://www.shibangchina.com/e/admin/ListNews.php*
+// @include     http://static.sbmchina.com/e/admin/ListNews.php*
 // @require     http://code.jquery.com/jquery-2.1.1.min.js
 // @version     1
 // @grant       GM_xmlhttpRequest

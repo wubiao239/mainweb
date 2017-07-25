@@ -1,0 +1,21 @@
+﻿Impact crusher crushing chamber other parameters
+
+
+
+Δ angle is the hammer external tangent, that is, the direction of the material to the counterattack plate and the direction of the counterattack plate perpendicular to the angle between the general δ = 2 ° or so. It is based on the following viewpoints, that is, the surface of the material and the counterattack plate should be a vertical collision, so that the broken effect is better, less wear liner. If δ = 0 °, that is, the material and the counterattack plate vertical collision, the kind of counterattack plate curve should be an involute, but the involute and difficult to manufacture, so the form of counterattack plate mainly line and arc two. The specific situation is discussed separately.
+The position of the counterattack plate at the discharge port of the first stage counterplate is determined by the values ​​of O1, emin and l. It is known that O1 = 15 ° and the other two specifications are θ1> 15 °. This is because the second stage counterattack plate discharge port are biased towards the horizontal centerline of the rotor, so θ1 = 15 ° ~ 19 °. Emin = 0. 1D, there are two polyline counterattack plate, if there are three polyline counterattack plate, and the third paragraph l value is also different, which is mainly by the counterattack plate hanging point and counterattack plate itself determined by the structure.
+For dry second-level counterattack plate, it should be as far back as possible, and the lower end of the discharge port close to the rotor horizontal center line. That is generally 02 = 60 ° ~ 77 °, try to choose 02 larger value, which will increase the crushing effect. The position of the third stage and the second stage of the second stage counterattack plate is determined by the angle y, y = 60 ° ~ 73 °. When 02 and emin are determined, the position of the second stage of the second-stage counterattack plate can be determined by combining the y-angle, so that the position of the second-stage counterplate is also substantially determined. And finally completed the counter-crusher crushing chamber design.
+It can also be seen that the arc length of the crusher and the crushing chamber is different, that is, the angle θ = 02 + (90 ° -α) of the rotor is different, and the corresponding arc Longer length is better.
+
+Finally, the main structural parameters of crushing chamber are summarized in Table 2.
+
+
+The same time as the above-
+
+\tto sum up
+
+
+The data listed in Table 1 are based on the rotor diameter. Therefore, the data in the reference table can be used to design any type of crusher crusher, which can be used to determine the size of the crusher, So it is versatile.
+
+
+Table 1 shows the crushing chamber structure parameters shown in Table 1, it is easy to see that the table listed in the four specifications of the crusher to PF-1315 type crusher crushing chamber is superior.
