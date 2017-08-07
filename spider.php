@@ -149,7 +149,7 @@ function getSiteLinks($urlArry)
 } 
 
 
-$hrefs=fetchlinks("http://sparepart.sbmchina.com/");
+$hrefs=fetchlinks("http://www.sbmchina.com");
 getSiteLinks($hrefs);
 print_r($urls);
 

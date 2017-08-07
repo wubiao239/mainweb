@@ -33,7 +33,7 @@ $db = MysqlDB::getInstance('127.0.0.1', 'empirecms', 'root');
 
 $classid = 65;
 
-$path = "./finished/material/";
+$path = "./finished/green/material/";
 $dirs = listDir($path);
 //print_r($dirs);
 
@@ -41,8 +41,11 @@ foreach ($dirs as $key => $value) {
     //if($key >= 1) break;
     $allpath = $path . $value;
     $title = file_get_contents($allpath . '/' . 'title.html') or die("读取失败".$allpath . '/' . 'title.html');
+    $title=addslashes($title);
     $des = file_get_contents($allpath . '/' . 'des.html');
+    $des=addslashes($des);
     $content = file_get_contents($allpath . '/' . 'content.html');
+    $content=addslashes($content);
     //产品数据表中字段
     $profield = array(
         "classid" => $classid,
@@ -50,7 +53,7 @@ foreach ($dirs as $key => $value) {
         "onclick" => 0,
         "plnum" => 0,
         "totaldown" => 0,
-        //"newspath" => "",
+        "newspath" => "",
         "filename" => $value,
         "userid" => 1,
         "username" =>"wubiao",
@@ -71,7 +74,7 @@ foreach ($dirs as $key => $value) {
         "stb" => 1,
         "fstb" => 1,
         "restb" => 1,
-        //"keyboard" => "",
+        "keyboard" => "",
         "title" => $title,
         "newstime" => 1493109247,
         "titlepic" => "/images/{$value}/{$value}.jpg",
@@ -92,12 +95,12 @@ foreach ($dirs as $key => $value) {
     $proDataField = array(
         "id" => $id,
         "classid" => $classid,
-        //"keyid" =>"",
+        "keyid" =>"",
         "dokey" => 0,
         "newstempid" => 0,
         "closepl" => 0,
         "haveaddfen" => 0,
-        //"infotags" =>"" ,
+        "infotags" =>"" ,
         
     );
    
