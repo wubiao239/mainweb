@@ -89,7 +89,7 @@ function getCurrentTime (){
 function curl_get_contents($proxy){
 	$ch = curl_init();   
 	curl_setopt($ch, CURLOPT_URL, "http://167.114.135.189/ip.php?antc=".time());
-	curl_setopt ($ch, CURLOPT_PROXY, $proxy);
+	curl_setopt($ch, CURLOPT_PROXY, $proxy);
 	curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
 	curl_setopt($ch, CURLOPT_USERAGENT,"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36");
 	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);

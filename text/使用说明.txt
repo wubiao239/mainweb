@@ -1,0 +1,13 @@
+php版本5.3
+++++++++++++++++++++++++++++++++++++++++++++++
+
+采集产品页
+1.处理prolist.txt文件使用prolist.php文件
+2.prolist.txt与prolist.php在同一目录下处理
+3.处理完成后的采集内容与prolist.php文件在同一目录
+
++++++++++++++++++++++++++++++++++++++++++++++++
+采集案例页
+1.处理caselist.txt文件使用caselist.php文件
+2.caselist.txt与caselist.php在同一目录下处理
+3.处理完成后的采集内容在material目录下面
