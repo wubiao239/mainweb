@@ -61,14 +61,14 @@ class MysqlDB
         if ($where) {
             $strSql = '';
             foreach ($arrayDataValue as $key => $value) {
-                $strSql .= ", '$key'='$value'";
+                $strSql .= ", `$key`='$value'";
             }
             $strSql = substr($strSql, 1);
             $strSql = "UPDATE $table SET $strSql WHERE $where";
         } else {
             $strSql = "REPLACE INTO $table (".implode(',', array_keys($arrayDataValue)).") VALUES ('".implode("','", $arrayDataValue)."')";
         }
-       
+       echo $strSql;
         $result = $this->pdo->exec($strSql);
         
         return $result;
