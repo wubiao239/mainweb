@@ -1,0 +1,668 @@
+Model##B-1140
+Soft material##50
+Hard material##45
+Side and central feeding##450-520
+Fully central feeding##225-260
+Speed (r/min)##1180-1310
+Power (kw)##200×2
+Overall dimension (mm)##5100×2690×3200
+###
+Model##B-9526
+Soft material##45
+Hard material##40
+Side and central feeding##300-380
+Fully central feeding##150-190
+Speed (r/min)##1360-1510
+Power (kw)##132×2
+Overall dimension (mm)##4560×2450×2780
+###
+Model##B-8518
+Soft material##40
+Hard material##35
+Side and central feeding##200-260
+Fully central feeding##100-130
+Speed (r/min)##1520-1690
+Power (kw)##90×2
+Overall dimension (mm)##4140×2280×2425
+###
+Model##B-7611
+Soft material##35
+Hard material##30
+Side and central feeding##120-180
+Fully central feeding##60-90
+Speed (r/min)##1700-1890
+Power (kw)##55×2
+Overall dimension (mm)##4100×2250×2258
+####
+Model##B500
+Width（mm）##500
+Inclination（°）##0-17
+Speed（m/s）##1.0-2.0
+Capacity（t/h）##100-200
+Power（L≤30m)（kw）##4-7.5
+###
+Model##B650
+Width（mm）##650
+Inclination（°）##0-17
+Speed（m/s）##1.0-2.0
+Capacity（t/h）##190-380
+Power（L≤30m)（kw）##4-11
+###
+Model##B800
+Width（mm）##800
+Inclination（°）##0-17
+Speed（m/s）##1.0-2.0
+Capacity（t/h）##300-600
+Power（L≤30m)（kw）##5.5-18.5
+###
+Model##B1000
+Width（mm）##1000
+Inclination（°）##0-17
+Speed（m/s）##1.0-2.0
+Capacity（t/h）##490-900
+Power（L≤30m)（kw）##7.5-22
+###
+Model##B1200
+Width（mm）##1200
+Inclination（°）##0-17
+Speed（m/s）##1.0-2.0
+Capacity（t/h）##730-1400
+Power（L≤30m)（kw）##11-30
+####
+Model##VSI6X1263
+Sanding making##50
+Reshaping##60
+Sanding making##454-486
+Reshaping##545-583
+Speed (r/min)##900-1200
+Power (kw)##315×2
+Overall dimension (mm)##5700×2980×4190
+###
+Model##VSI6X1150
+Sanding making##45
+Reshaping##55
+Sanding making##344-368
+Reshaping##413-442
+Speed (r/min)##1000-1300
+Power (kw)##250×2
+Overall dimension (mm)##5500×2750×3950
+###
+Model##VSI6X1040
+Sanding making##40
+Reshaping##50
+Sanding making##264-283
+Reshaping##317-342
+Speed (r/min)##1100-1400
+Power (kw)##200×2
+Overall dimension (mm)##4880×2560×3725
+###
+Model##VSI6X9026
+Sanding making##35
+Reshaping##45
+Sanding making##167-179
+Reshaping##200-215
+Speed (r/min)##1200-1500
+Power (kw)##132×2
+Overall dimension (mm)##4200×2400×3150
+###
+Model##VSI6X8018
+Sanding making##30
+Reshaping##40
+Sanding making##109-117
+Reshaping##131-140
+Speed (r/min)##1300-1700
+Power (kw)##90×2
+Overall dimension (mm)##4100×2300×2750
+####
+Model##PF1010
+Rotor spec (mm)##Φ1000×1050
+Feed opening (mm)##400×1080
+Maximum feeding size (mm)##350
+Capacity (t/h)##50-80
+Power (kw)##75
+Overall dimension (mm)##2455×2086×2800
+###
+Model##PF1210
+Rotor spec (mm)##Φ1250×1050
+Feed opening (mm)##400×1080
+Maximum feeding size (mm)##350
+Capacity (t/h)##60-120
+Power (kw)##110
+Overall dimension (mm)##2590×2050×2810
+###
+Model##PF1214
+Rotor spec (mm)##Φ1250×1400
+Feed opening (mm)##400×1430
+Maximum feeding size (mm)##350
+Capacity (t/h)##80-160
+Power (kw)##132
+Overall dimension (mm)##2590×2400×2810
+###
+Model##PF1315
+Rotor spec (mm)##Φ1300×1500
+Feed opening (mm)##860×1520
+Maximum feeding size (mm)##350
+Capacity (t/h)##120-260
+Power (kw)##200
+Overall dimension (mm)##2930×2760×3050
+####
+Model##PFW1214II
+Rotor spec (mm)##Ф1150×1400
+Feed opening (mm)##1100×1430
+Maximum feeding size (mm)##500
+Capacity(t/h)##130-200
+Power(kw)##132
+Overall dimension (mm)##2400×2310×2550
+###
+Model##PFW1315II
+Rotor spec (mm)##Ф1300×1500
+Feed opening (mm)##1200×1530
+Maximum feeding size (mm)##600
+Capacity(t/h)##180-320
+Power(kw)##200
+Overall dimension (mm)##2700×2570×2800
+###
+Model##PFW1318II
+Rotor spec (mm)##Ф1300×1800
+Feed opening (mm)##1200×1830
+Maximum feeding size (mm)##700
+Capacity(t/h)##240-400
+Power(kw)##250
+Overall dimension (mm)##2700×2870×2800
+###
+Model##PFW1415II
+Rotor spec (mm)##Ф1400×1500
+Feed opening (mm)##1450×1530
+Maximum feeding size (mm)##700
+Capacity(t/h)##300-480
+Power(kw)##250
+Overall dimension (mm)##2900×2700×3000
+###
+Model##PFW1214Ⅲ
+Rotor spec (mm)##Ф1150×1400
+Feed opening (mm)##570×1430
+Maximum feeding size (mm)##250
+Capacity(t/h)##90-170
+Power(kw)##132
+Overall dimension (mm)##2550×2310×2100
+###
+Model##PFW1315Ⅲ
+Rotor spec (mm)##Ф1300×1500
+Feed opening (mm)##625×1530
+Maximum feeding size (mm)##300
+Capacity(t/h)##180-270
+Power(kw)##200
+Overall dimension (mm)##2960×2570×2380
+###
+Model##PFW1318Ⅲ
+Rotor spec (mm)##Ф1300×1800
+Feed opening (mm)##625×1830
+Maximum feeding size (mm)##300
+Capacity(t/h)##220-300
+Power(kw)##250
+Overall dimension (mm)##2960×2870×2380
+###
+Model##PFW1415Ⅲ
+Rotor spec (mm)##Ф1400×1500
+Feed opening (mm)##800×1530
+Maximum feeding size (mm)##350
+Capacity(t/h)##280-350
+Power(kw)##250
+Overall dimension (mm)##3120×2650×2660
+####
+Model##CI5X1110
+Rotor spec (mm)##1100×1000
+Feed opening (mm)##1020×820
+Maximum feeding size (mm)##500(recommend≤250)
+Capacity(t/h)##150-200
+Power(kw)##160-200
+Overall dimension (mm)##2626×2106×1945
+###
+Model##CI5X1213
+Rotor spec (mm)##1200×1300
+Feed opening (mm)##1320×880
+Maximum feeding size (mm)##550(recommend≤300)
+Capacity(t/h)##200-300
+Power(kw)##200-250
+Overall dimension (mm)##2809×2529×2091
+###
+Model##CI5X1315
+Rotor spec (mm)##1300×1500
+Feed opening (mm)##1540×930
+Maximum feeding size (mm)##600(recommend≤300)
+Capacity(t/h)##250-350
+Power(kw)##250-315
+Overall dimension (mm)##2880×2755×2560
+###
+Model##CI5X1520
+Rotor spec (mm)##1500×2000
+Feed opening (mm)##2040×995
+Maximum feeding size (mm)##700(recommend≤350)
+Capacity(t/h)##400-600
+Power(kw)##400-500
+Overall dimension (mm)##3390×3520×2790
+###
+Model##CI5X1313
+Rotor spec (mm)##1300×1300
+Feed opening (mm)##1320×1225
+Maximum feeding size (mm)##800(recommend≤550)
+Capacity(t/h)##300-450
+Power(kw)##200-250
+Overall dimension (mm)##2963×2560×2611
+###
+Model##CI5X1415
+Rotor spec (mm)##1400×1500
+Feed opening (mm)##1540×1320
+Maximum feeding size (mm)##900(recommend≤600)
+Capacity(t/h)##350-550
+Power(kw)##250-315
+Overall dimension (mm)##2995×2790×3090
+###
+Model##CI5X1620
+Rotor spec (mm)##1600×2000
+Feed opening (mm)##2040×1630
+Maximum feeding size (mm)##1100(recommend≤700)
+Capacity(t/h)##500-900
+Power(kw)##400-500
+Overall dimension (mm)##3485×3605×3720
+###
+Model##CI5X2023
+Rotor spec (mm)##2000×2300
+Feed opening (mm)##2310×1990
+Maximum feeding size (mm)##1300(recommend≤800)
+Capacity(t/h)##1200-2000
+Power(kw)##1000-1200
+Overall dimension (mm)##4890×4330×4765
+####
+Model##36(3′)
+Movable Cone Diametermm (inch)##900 (3′)
+Chamber Style##medium
+Opening Side##83
+Closed Side##102
+Discharging Opening (mm)##9-22
+REV (r/min)##580
+Power (kw)##6-75
+Motor Model##Y315S-6/75
+Capacity (t/h)##45-91
+Machine Size (mm)##2821×1880 ×2164
+###
+Model##36(3′)
+Movable Cone Diametermm (inch)##914 (3′)
+Chamber Style##fine
+Opening Side##13
+Closed Side##41
+Discharging Opening (mm)##3-13
+REV (r/min)##580
+Power (kw)##6-75
+Motor Model##Y315S-6/75
+Capacity (t/h)##27-90
+Machine Size (mm)##2821×1880 ×2410
+###
+Model##51(4.25′)
+Movable Cone Diametermm (inch)##1295 (4 1/4′)
+Chamber Style##fine
+Opening Side##109
+Closed Side##137
+Discharging Opening (mm)##13-31
+REV (r/min)##485
+Power (kw)##6-185
+Motor Model##Y355M2-6/185
+Capacity (t/h)##109-181
+Machine Size (mm)##2800×2342 ×2668
+###
+Model##51(4.25′)
+Movable Cone Diametermm (inch)##1295 (4 1/4′)
+Chamber Style##fine
+Opening Side##29
+Closed Side##64
+Discharging Opening (mm)##3-16
+REV (r/min)##485
+Power (kw)##6-160
+Motor Model##Y355M1-6/160
+Capacity (t/h)##36-163
+Machine Size (mm)##2800×2342 ×2668
+###
+Model##66(5.5′)
+Movable Cone Diametermm (inch)##1650 (5 1/2′)
+Chamber Style##fine
+Opening Side##188
+Closed Side##209
+Discharging Opening (mm)##16-38
+REV (r/min)##485
+Power (kw)##6-240
+Motor Model##　
+Capacity (t/h)##181-327
+Machine Size (mm)##3911×2870 ×3771
+###
+Model##66(5.5′)
+Movable Cone Diametermm (inch)##1650 (5 1/2′)
+Chamber Style##fine
+Opening Side##35
+Closed Side##70
+Discharging Opening (mm)##5-13
+REV (r/min)##485
+Power (kw)##6-240
+Motor Model##　
+Capacity (t/h)##90-209
+Machine Size (mm)##3917×2870 ×3771
+###
+Model##84(7′)
+Movable Cone Diametermm (inch)##2134 (7′)
+Chamber Style##fine
+Opening Side##253
+Closed Side##278
+Discharging Opening (mm)##19-38
+REV (r/min)##435
+Power (kw)##6-400
+Motor Model##　
+Capacity (t/h)##381-726
+Machine Size (mm)##5200×4300 ×4700
+###
+Model##84(7′)
+Movable Cone Diametermm (inch)##2134 (7′)
+Chamber Style##fine
+Opening Side##51
+Closed Side##105
+Discharging Opening (mm)##5-16
+REV (r/min)##435
+Power (kw)##6-400
+Motor Model##　
+Capacity (t/h)##190-408
+Machine Size (mm)##5200×4300 ×4700
+####
+Model##HPC220
+Movable Cone Diameter  (mm)##1220
+Chamber Style##Coarse
+Min. Discharging  (mm)##19
+Max. Feeding  (mm)##210
+Capacity  (t/h)##185-300
+Power  (kw)##220
+Machine Size  (mm)##2726×1950×2182
+###
+Model##HPC400
+Movable Cone Diameter  (mm)##1570
+Chamber Style##Coarse
+Min. Discharging  (mm)##30
+Max. Feeding  (mm)##290
+Capacity  (t/h)##400-500
+Power  (kw)##400
+Machine Size  (mm)##3447×2830×2977
+####
+Model##HST100
+Cavities##S1 Extra Coarse
+Maximum feeding size (mm)##240
+Minimum discharging size (mm)##22
+Capacities (t/h)##85-170
+Nominal installed power (kw)##90
+Maximum installed power (kw)##90
+Overall dimension (mm)##1550×1575×2545
+###
+Model##HST160
+Cavities##S1 Extra Coarse
+Maximum feeding size (mm)##360
+Minimum discharging size (mm)##25
+Capacities (t/h)##120-345
+Nominal installed power (kw)##132
+Maximum installed power (kw)##160
+Overall dimension (mm)##1875×1920×3195
+###
+Model##HST250
+Cavities##S1 Extra Coarse
+Maximum feeding size (mm)##450
+Minimum discharging size (mm)##35
+Capacities (t/h)##255-605
+Nominal installed power (kw)##220
+Maximum installed power (kw)##250
+Overall dimension (mm)##2100×2320×4096
+###
+Model##HST315
+Cavities##S1 Extra Coarse
+Maximum feeding size (mm)##560
+Minimum discharging size (mm)##41
+Capacities (t/h)##335-1050
+Nominal installed power (kw)##315
+Maximum installed power (kw)##315
+Overall dimension (mm)##2380×2735×4630
+###
+Model##HST560
+Cavities##H1 Fine
+Maximum feeding size (mm)##300
+Minimum discharging size (mm)##22
+Capacities (t/h)##430-1515
+Nominal installed power (kw)##560
+Maximum installed power (kw)##560
+Overall dimension (mm)##3780×2341×4531
+###
+Model##HST750
+Cavities##H1 Fine
+Maximum feeding size (mm)##370
+Minimum discharging size (mm)##25
+Capacities (t/h)##460-2130
+Nominal installed power (kw)##710
+Maximum installed power (kw)##750
+Overall dimension (mm)##3100×3623×5305
+####
+Model##HPT100
+Cavities##C1(Extra Coarse)
+Feed opening (mm)##140
+Minimum discharging size (mm)##19
+Capacities (t/h)##75-140
+Nominal installed power (kw)##90
+Maximum installed power (kw)##90
+Overall dimension (mm)##1705×1510×1583
+###
+Model##HPT200
+Cavities##C2(Coarse)
+Feed opening (mm)##185
+Minimum discharging size (mm)##19
+Capacities (t/h)##145-250
+Nominal installed power (kw)##160
+Maximum installed power (kw)##160
+Overall dimension (mm)##2135×1750×1927
+###
+Model##HPT300
+Cavities##C1(Extra Coarse)
+Feed opening (mm)##230
+Minimum discharging size (mm)##25
+Capacities (t/h)##220-440
+Nominal installed power (kw)##220
+Maximum installed power (kw)##250
+Overall dimension (mm)##2725×2110×2871
+###
+Model##HPT400
+Cavities##C1(Extra Coarse)
+Feed opening (mm)##295
+Minimum discharging size (mm)##30
+Capacities (t/h)##300-630
+Nominal installed power (kw)##315
+Maximum installed power (kw)##315
+Overall dimension (mm)##2775×2370×2295
+###
+Model##HPT500
+Cavities##C1(Extra Coarse)
+Feed opening (mm)##330
+Minimum discharging size (mm)##38
+Capacities (t/h)##425-790
+Nominal installed power (kw)##400
+Maximum installed power (kw)##400
+Overall dimension (mm)##2800×3480×4050
+###
+Model##HPT800
+Cavities##C1(Extra Coarse)
+Feed opening (mm)##350
+Minimum discharging size (mm)##38
+Capacities (t/h)##570-1200
+Nominal installed power (kw)##630
+Maximum installed power (kw)##630
+Overall dimension (mm)##3970×3345×4235
+####
+Model##PEW250×1000
+Feed opening (mm)##250×1000
+Maximum feeding size (mm)##220
+Range of discharge opening (mm)##20-40
+Capacity (t/h)##15-50
+Speed (r/min)##330
+Power (kw)##30
+Overall dimension (mm)##1400×1850×1310
+###
+Model##PEW250×1200
+Feed opening (mm)##250×1200
+Maximum feeding size (mm)##220
+Range of discharge opening (mm)##20-40
+Capacity (t/h)##20-50
+Speed (r/min)##330
+Power (kw)##37
+Overall dimension (mm)##1400×2050×1310
+###
+Model##PEW400×600
+Feed opening (mm)##400×600
+Maximum feeding size (mm)##350
+Range of discharge opening (mm)##35-85
+Capacity (t/h)##15-70
+Speed (r/min)##250
+Power (kw)##37
+Overall dimension (mm)##1920×1460×1840
+###
+Model##PEW760
+Feed opening (mm)##760×1100
+Maximum feeding size (mm)##640
+Range of discharge opening (mm)##75-200
+Capacity (t/h)##150-350
+Speed (r/min)##270
+Power (kw)##110
+Overall dimension (mm)##2600×2500×2200
+###
+Model##PEW860
+Feed opening (mm)##860×1100
+Maximum feeding size (mm)##720
+Range of discharge opening (mm)##100-225
+Capacity (t/h)##200-500
+Speed (r/min)##240
+Power (kw)##132
+Overall dimension (mm)##3300×2320×3120
+###
+Model##PEW1100
+Feed opening (mm)##1100×1200
+Maximum feeding size (mm)##930
+Range of discharge opening (mm)##150-275
+Capacity (t/h)##300-650
+Speed (r/min)##210
+Power (kw)##185
+Overall dimension (mm)##4140×2660×3560
+####
+Model##PE500×750
+Feed opening (mm)##500×750
+Maximum feeding size (mm)##425
+Range of discharge opening (mm)##50-100
+Capacity (t/h)##45-100
+Speed (r/min)##275
+Power (kw)##55
+Overall dimension (mm)##1890×1916×1870
+###
+Model##PE600×900
+Feed opening (mm)##600×900
+Maximum feeding size (mm)##500
+Range of discharge opening (mm)##65-160
+Capacity (t/h)##70-120
+Speed (r/min)##250
+Power (kw)##75
+Overall dimension (mm)##2520×1840×2303
+###
+Model##PE750×1060
+Feed opening (mm)##750×1060
+Maximum feeding size (mm)##630
+Range of discharge opening (mm)##80-140
+Capacity (t/h)##130-260
+Speed (r/min)##250
+Power (kw)##90
+Overall dimension (mm)##2620×2302×3110
+###
+Model##PE900×1200
+Feed opening (mm)##900×1200
+Maximum feeding size (mm)##750
+Range of discharge opening (mm)##95-165
+Capacity (t/h)##220-380
+Speed (r/min)##200
+Power (kw)##130
+Overall dimension (mm)##3789×2826×3025
+###
+Model##PE1000×1200
+Feed opening (mm)##1000×1200
+Maximum feeding size (mm)##850
+Range of discharge opening (mm)##195-265
+Capacity (t/h)##230-380
+Speed (r/min)##200
+Power (kw)##130
+Overall dimension (mm)##3889×2826×3025
+###
+Model##PE1200×1500
+Feed opening (mm)##1200×1500
+Maximum feeding size (mm)##1020
+Range of discharge opening (mm)##150-300
+Capacity (t/h)##400-800
+Speed (r/min)##220
+Power (kw)##200
+Overall dimension (mm)##4930×3150×3700
+####
+Model##C6X80
+Feed opening (mm)##520×800
+Maximum feeding size (mm)##420
+Range of discharge opening (mm)##60-150
+Capacity(t/h)##80-290
+Speed(r/min)##350
+Power(kw)##75
+Overall dimension (mm)##2650×1540×1780
+###
+Model##C6X100
+Feed opening (mm)##760×1000
+Maximum feeding size (mm)##630
+Range of discharge opening (mm)##70-175
+Capacity(t/h)##130-420
+Speed(r/min)##260
+Power(kw)##110
+Overall dimension (mm)##3700×2440×2520
+###
+Model##C6X110
+Feed opening (mm)##850×1100
+Maximum feeding size (mm)##720
+Range of discharge opening (mm)##80-200
+Capacity(t/h)##160-550
+Speed(r/min)##230
+Power(kw)##160
+Overall dimension (mm)##3800×2450×2550
+###
+Model##C6X125
+Feed opening (mm)##950×1250
+Maximum feeding size (mm)##800
+Range of discharge opening (mm)##125-250
+Capacity(t/h)##280-760
+Speed(r/min)##220
+Power(kw)##160
+Overall dimension (mm)##4100×2750×2780
+###
+Model##C6X145
+Feed opening (mm)##1100×1450
+Maximum feeding size (mm)##920
+Range of discharge opening (mm)##150-275
+Capacity(t/h)##370-950
+Speed(r/min)##220
+Power(kw)##200
+Overall dimension (mm)##4400×3060×3210
+###
+Model##C6X160
+Feed opening (mm)##1200×1600
+Maximum feeding size (mm)##1020
+Range of discharge opening (mm)##175-300
+Capacity(t/h)##470-1100
+Speed(r/min)##220
+Power(kw)##250
+Overall dimension (mm)##5700×3650×3550
+###
+Model##C6X200
+Feed opening (mm)##1500×2000
+Maximum feeding size (mm)##1200
+Range of discharge opening (mm)##200-300
+Capacity(t/h)##620-1500
+Speed(r/min)##200
+Power(kw)##400
+Overall dimension (mm)##6500×3990×4260
