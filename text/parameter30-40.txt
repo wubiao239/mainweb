@@ -416,7 +416,7 @@ Power (kW)## 2×55
 Overall dimension (mm)##15720×4885×3050
 ####
 @34@
-Model##F5X1045（M）
+Model##F5X1045(M）
 Size of funnel (mm)##1000×4500
 Grizzly length (mm)##1×1200
 Inclination (°)##5(0-10)
@@ -427,7 +427,7 @@ Capacity (t/h)##400
 Power (kw)##15
 Overall dimension (mm)##4475×1660×1485
 
-Model##F5X1345（M）
+Model##F5X1345(M）
 Size of funnel (mm)##1300×4500
 Grizzly length (mm)##1×1200
 Inclination (°)##5(0-10)
@@ -438,7 +438,7 @@ Capacity (t/h)##600
 Power (kw)##22
 Overall dimension (mm)##4475×1960×1485
 
-Model##F5X1360（S）
+Model##F5X1360(S）
 Size of funnel (mm)##1300×6000
 Grizzly length (mm)##2×1200
 Inclination (°)##5(0-10)
@@ -449,7 +449,7 @@ Capacity (t/h)##600
 Power (kw)##30
 Overall dimension (mm)##6195×1960×1680
 
-Model##F5X1645（M）
+Model##F5X1645(M）
 Size of funnel (mm)##1600×4500
 Grizzly length (mm)##1×1200
 Inclination (°)##5(0-10)
@@ -460,7 +460,7 @@ Capacity (t/h)##1000
 Power (kw)##22
 Overall dimension (mm)##4475×2260×1485
 
-Model##F5X1660（S）
+Model##F5X1660(S）
 Size of funnel (mm)##1600×6000
 Grizzly length (mm)##2×1200
 Inclination (°)##5(0-10)
@@ -511,7 +511,7 @@ Power (kw)##160
 Output size (mm)##0.8-0.074	
 Capacity (t/h)##22-5.0
 Volt##380V
-Weight（T)##42.9- 46.5
+Weight(T)##42.9- 46.5
 
 Model##MQY2130
 Shell Size D×L(mm)##2100×3000
@@ -522,7 +522,7 @@ Power (kw)##185
 Output size (mm)##0.8-0.074	
 Capacity (t/h)##25-5.8
 Volt##380V
-Weight（T)##48
+Weight(T)##48
 
 Model##MQY2136
 Shell Size D×L(mm)##2100×3600
@@ -533,7 +533,7 @@ Power (kw)##210
 Output size (mm)##0.8-0.074	
 Capacity (t/h)##28-6.0
 Volt##380V
-Weight（T)##49.9
+Weight(T)##49.9
 
 Model##MQY2430
 Shell Size D×L(mm)##2400×3000
@@ -544,7 +544,7 @@ Power (kw)##250
 Output size (mm)##0.8-0.074	
 Capacity (t/h)## 34-6.6
 Volt##380V
-Weight（T)##59.68
+Weight(T)##59.68
 
 Model##MQY2436
 Shell Size D×L(mm)##2400×3600
@@ -555,7 +555,7 @@ Power (kw)##280
 Output size (mm)##0.8-0.074	
 Capacity (t/h)##40.5-7.9
 Volt##380V
-Weight（T)##62.9
+Weight(T)##62.9
 
 Model##MQY2445
 Shell Size D×L(mm)##2400×4500
@@ -566,7 +566,7 @@ Power (kw)##355
 Output size (mm)##0.8-0.074	
 Capacity (t/h)##50-9.8
 Volt##380V
-Weight（T)##63.5
+Weight(T)##63.5
 
 Model##MQY2721
 Shell Size D×L(mm)##2700×2100
@@ -577,7 +577,7 @@ Power (kw)##280
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##76-6.0
 Volt##6-10KV
-Weight（T)##66.7
+Weight(T)##66.7
 
 Model##MQY2730
 Shell Size D×L(mm)##2700×3000
@@ -588,7 +588,7 @@ Power (kw)##355
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##108-8.8
 Volt##6-10KV
-Weight（T)##81.8
+Weight(T)##81.8
 
 Model##MQY2736
 Shell Size D×L(mm)##2700×3600
@@ -599,7 +599,7 @@ Power (kw)##355-400
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##130-10.5
 Volt##6-10KV
-Weight（T)## 83.5
+Weight(T)## 83.5
 
 Model##MQY2740
 Shell Size D×L(mm)##2700×4000
@@ -610,7 +610,7 @@ Power (kw)##400-450
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##144-11.5
 Volt##6-10KV
-Weight（T)## 87.6
+Weight(T)## 87.6
 
 Model##MQY2745
 Shell Size D×L(mm)##2700×4500
@@ -621,7 +621,7 @@ Power (kw)##500
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##180-13
 Volt##6-10KV
-Weight（T)##127
+Weight(T)##127
 
 Model##MQY3231
 Shell Size D×L(mm)##3200×3100
@@ -632,7 +632,7 @@ Power (kw)##450
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##164-14.4
 Volt##6-10KV
-Weight（T)##131
+Weight(T)##131
 
 Model##MQY3236
 Shell Size D×L(mm)##3200×3600
@@ -643,7 +643,7 @@ Power (kw)##500
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##171-17.1
 Volt##6-10KV
-Weight（T)##135
+Weight(T)##135
 
 Model##MQY3245
 Shell Size D×L(mm)##3200×4500
@@ -654,7 +654,7 @@ Power (kw)##630
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##228-22
 Volt##6-10KV
-Weight（T)##148.7
+Weight(T)##148.7
 
 Model##MQY3254
 Shell Size D×L(mm)##3200×5400
@@ -665,7 +665,7 @@ Power (kw)##710
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##270-20
 Volt##6-10KV
-Weight（T)##165
+Weight(T)##165
 
 Model##MQY3645
 Shell Size D×L(mm)##3600×4500
@@ -676,7 +676,7 @@ Power (kw)##800-1000
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##233-26
 Volt##6-10KV
-Weight（T)##180
+Weight(T)##180
 
 Model##MQY3650
 Shell Size D×L(mm)##3600×5000
@@ -687,7 +687,7 @@ Power (kw)##1120
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##260-31.5
 Volt##6-10KV
-Weight（T)##200
+Weight(T)##200
 
 Model##MQY3660
 Shell Size D×L(mm)##3600×6000
@@ -698,7 +698,7 @@ Power (kw)##1250
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##280-34
 Volt##6-10KV
-Weight（T)##240
+Weight(T)##240
 
 Model##MQY3685
 Shell Size D×L(mm)##3600×8500
@@ -709,7 +709,7 @@ Power (kw)##1500
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##400-45
 Volt##6-10KV
-Weight（T)##280
+Weight(T)##280
 
 Model##MQY4564
 Shell Size D×L(mm)##4500×6400
@@ -720,7 +720,7 @@ Power (kw)##2000
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##158
 Volt##6-10KV
-Weight（T)##285
+Weight(T)##285
 
 Model##MQY4570
 Shell Size D×L(mm)##4500×7000
@@ -731,7 +731,7 @@ Power (kw)##2500
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##200
 Volt##6-10KV
-Weight（T)##350
+Weight(T)##350
 
 Model##MQY5080
 Shell Size D×L(mm)##5030×8000
@@ -742,7 +742,7 @@ Power (kw)##3500
 Output size (mm)##3.0-0.074	
 Capacity (t/h)##250
 Volt##6-10KV
-Weight（T)##——
+Weight(T)##——
 ***
 Model##MQG2122
 Shell Size D×L(mm)##2100×2200
@@ -753,7 +753,7 @@ Power (kw)##160
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##24-5.3
 Volt##6-10KV
-Weight（T)##43.2
+Weight(T)##43.2
 
 Model##MQG2130
 Shell Size D×L(mm)##2100×3000
@@ -764,7 +764,7 @@ Power (kw)##185
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##26-6.0
 Volt##6-10KV
-Weight（T)##46.8
+Weight(T)##46.8
 
 Model##MQG2136
 Shell Size D×L(mm)##2100×3600
@@ -775,7 +775,7 @@ Power (kw)##210
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##29-6.5
 Volt##6-10KV
-Weight（T)##49.1
+Weight(T)##49.1
 
 Model##MQG2430
 Shell Size D×L(mm)##2400×3000
@@ -786,7 +786,7 @@ Power (kw)##250
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##38-7.5
 Volt##6-10KV
-Weight（T)##57.8
+Weight(T)##57.8
 
 Model##MQG2436
 Shell Size D×L(mm)##2400×3600
@@ -797,7 +797,7 @@ Power (kw)##280
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##42-8.5
 Volt##6-10KV
-Weight（T)##60.8
+Weight(T)##60.8
 
 Model##MQG2445
 Shell Size D×L(mm)##2400×4500
@@ -808,7 +808,7 @@ Power (kw)##400
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##55-10.5
 Volt##6-10KV
-Weight（T)##66.3
+Weight(T)##66.3
 
 Model##MQG2721
 Shell Size D×L(mm)##2700×2100
@@ -819,7 +819,7 @@ Power (kw)##400
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##55-10.5
 Volt##6-10KV
-Weight（T)##66.3
+Weight(T)##66.3
 
 Model##MQG2730
 Shell Size D×L(mm)##2700×3000
@@ -830,7 +830,7 @@ Power (kw)##355
 Output size (mm)##0.3-0.074	
 Capacity (t/h)## 120-10
 Volt##6-10KV
-Weight（T)##77.3
+Weight(T)##77.3
 
 Model##MQG2736
 Shell Size D×L(mm)##2700×3600
@@ -841,7 +841,7 @@ Power (kw)##400
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##145-12
 Volt##6-10KV
-Weight（T)##82.4
+Weight(T)##82.4
 
 Model##MQG2740
 Shell Size D×L(mm)##2700×4000
@@ -852,7 +852,7 @@ Power (kw)##450
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##159-13
 Volt##6-10KV
-Weight（T)##84.73
+Weight(T)##84.73
 
 Model##MQG2745
 Shell Size D×L(mm)##2700×4500
@@ -863,7 +863,7 @@ Power (kw)##500
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##180-15
 Volt##6-10KV
-Weight（T)##89.1
+Weight(T)##89.1
 
 Model##MQG3231
 Shell Size D×L(mm)##3200×3100
@@ -874,7 +874,7 @@ Power (kw)##500
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##182-16
 Volt##6-10KV
-Weight（T)##139
+Weight(T)##139
 
 Model##MQG3236
 Shell Size D×L(mm)##3200×3600
@@ -885,7 +885,7 @@ Power (kw)##560
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##190-19
 Volt##6-10KV
-Weight（T)##143
+Weight(T)##143
 
 Model##MQG3245
 Shell Size D×L(mm)##3200×4500
@@ -896,7 +896,7 @@ Power (kw)##710-800
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##235-29
 Volt##6-10KV
-Weight（T)##151
+Weight(T)##151
 
 Model##MQG3254
 Shell Size D×L(mm)##3200×5400
@@ -907,7 +907,7 @@ Power (kw)##800-1000
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##280-35
 Volt##6-10KV
-Weight（T)##161
+Weight(T)##161
 
 Model##MQG3645
 Shell Size D×L(mm)##3600×4500
@@ -918,7 +918,7 @@ Power (kw)##1000
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##259-29
 Volt##6-10KV
-Weight（T)##190
+Weight(T)##190
 
 Model##MQG3650
 Shell Size D×L(mm)##3600×5000
@@ -929,7 +929,7 @@ Power (kw)##1120
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##288-35
 Volt##6-10KV
-Weight（T)##200
+Weight(T)##200
 
 Model##MQG3660
 Shell Size D×L(mm)##3600×6000
@@ -940,7 +940,7 @@ Power (kw)##1250
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##310-38
 Volt##6-10KV
-Weight（T)##220
+Weight(T)##220
 
 Model##MQG3685
 Shell Size D×L(mm)##3600×8500
@@ -951,7 +951,7 @@ Power (kw)##1800
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##450-50
 Volt##6-10KV
-Weight（T)##260
+Weight(T)##260
  
 Model##MQG4040
 Shell Size D×L(mm)##4000×4000
@@ -962,7 +962,7 @@ Power (kw)##1000
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##230
 Volt##6-10KV
-Weight（T)##220
+Weight(T)##220
 
 Model##MQG4050
 Shell Size D×L(mm)##4000×5000
@@ -973,7 +973,7 @@ Power (kw)##1250
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##270
 Volt##6-10KV
-Weight（T)##260
+Weight(T)##260
 
 Model##MQG4560
 Shell Size D×L(mm)##4500×6000
@@ -984,7 +984,7 @@ Power (kw)##2000
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##285
 Volt##6-10KV
-Weight（T)##285
+Weight(T)##285
 
 Model##MQG5264
 Shell Size D×L(mm)##5200×6400
@@ -995,7 +995,7 @@ Power (kw)##2×1600
 Output size (mm)##0.3-0.074	
 Capacity (t/h)##320
 Volt##6-10KV
-Weight（T)##350
+Weight(T)##350
 ####
 @31@
 Model##φ2.2×3
@@ -1104,7 +1104,7 @@ Remark Model##YR630-8
 Power(kw)##1400
 Motor Model##MBY800
 Reduction ratio##5.6
-Reducer##220
+Reducer ## 220
 ####
 @30@
 Model##φ2.2×7

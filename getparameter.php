@@ -11,64 +11,83 @@ function get_content($fileName){
 	$fp = fopen($fileName, "rb") or die("Unable to open file ".$fileName);
 	$content=fread($fp,filesize($fileName));
 	fclose($fp);
-	return $content;
+	return mb_convert_encoding($content, "UTF-8");
 
 }
-function get_parameter(){
-	$content=get_content("./text/parameter.txt");
-$proa=explode("####",$content);
-$i=0;
-$parameters=array();
-foreach ($proa as $value) {
-	$paraa=explode("###",$value);
-	
-	foreach ($paraa as $value) {
-		# code...
-		$paralinea=explode("\r\n",$value);
-		$parameter=array();
-		foreach ($paralinea as $value) {
-			$para=explode("##",$value);
+function get_parameter($uri){
+	$content=get_content($uri);
+	$proa=explode("####",$content);
+	$i=0;
+	$parameters=array();
+	foreach ($proa as $value) {
+		$paraa=explode("\r\n\r\n",$value);
+		preg_match('~@(.*)@~', $value,$match);
+		preg_replace('~@(.*)@~', "",$value);
+		$pro_id=$match[1];
+		foreach ($paraa as $value) {
+			# code...
 			
-			if(!empty($para[0]))
+			$value=preg_replace('~@(.*)@~i',"",$value);
+			
+			$paralinea=explode("\r\n",$value);
+			
+			$parameter=array();
+			if(!empty($pro_id))
+				$parameter[product_id]=$pro_id;
+			foreach ($paralinea as $value) {
+				$para=explode("##",$value);
 				
-				$parameter[$para[0]]=$para[1];
+				if(!empty($para[0]))
+					$k=trim($para[0]);
+					$v=trim($para[1]);
+					$parameter[$k]=$v;
+					
+
+			}
+			//print_r($parameter);
+			$parameters[]=$parameter;
+			$i++;
+
 		}
-
-		//echo "============";
-		//$product[]=$parameter;
-		$parameters[]=$parameter;
-		$i++;
-
+		
 	}
-	
-}
-return $parameters;
+	return $parameters;
 }
 
-function get_source(){
+function get_source($uri){
 	$title="";
 	
 	$content="";
-	$ps=get_parameter();
+	$ps=get_parameter($uri);
 
 	$sources=array();
 	foreach ($ps as $key => $value) {
-		$titel=$value[Model];
+
+		$title=$value[Model];
+		$pro_id=$value[product_id];
 		$source=array();
 		$content="";
+		$i=1;
 		foreach ($value as $key => $value) {
-			$content.='<div class="weui-form-preview__item pb10 pt10">
+			if($i!=1){
+			$content.='<div class="weui-form-preview__item  pt10">
 			       <label class="weui-form-preview__label">'.$key.'</label>
 			       <span class="weui-form-preview__value">'.$value.'</span>
-			     </div><div class="border-bottom"></div> ';
+			     </div><div class="border-bottom"></div> ';}
+			     $i++;
 		}
 		$time=time();
-		$source[titel]=$titel;
-		$source[content]=addslashes($content);
+		$source[title]=$title;
+		$source[content]=$content;
 		$source[time]=$time;
+		$source[product_id]=$pro_id;
 		$sources[]=$source;
 	}
 	return $sources;
 }
-print_r(get_source());
- ?>}
+// $s=get_source("./text/parameter30-40.txt");
+// foreach ($s as $key => $value) {
+	 
+// 	echo $value[title].'==='.urlencode(strtolower(trim($value[title]))).PHP_EOL;
+// }
+ ?>

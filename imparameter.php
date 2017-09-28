@@ -1,28 +1,32 @@
 <?php 
 
 include_once ('MysqlDB.class.php');
-include_once("getSource.php");
-$db = MysqlDB::getInstance('127.0.0.1', 'empirecms', 'root','');
+include_once("getparameter.php");
+$db = MysqlDB::getInstance('127.0.0.1', 'm_zenithcrusher_com', 'root','');
 
 //$data = $db->fetch("phome_ecms_news_index"," WHERE id =655");
 
 //$data=$query->fetchAll();
 //print_r($data);
 
-
-$urls=getUrls("urls/ar_url.log");
-//
-$filename=600;
-foreach ($urls as $url) {
-
-	$source=getSource($url);
+$sourcea=get_source("./text/parameter30-40.txt");
+//print_r($sourcea);
+foreach ($sourcea as $source) {
+	$re = $db->query("select max(id) from phome_ecms_specification");
+	$result=$re->fetch();
+	$id=$result[0];
+	$filename=$id+1;
+	
 	//print_r($source);
 	$title = $source['title'];
+	//$filename=urlencode(strtolower($title));
 	$time = $source['time'];
-	$time=strtotime("2012-12-10");
+	$product_id=$source['product_id'];
+	//echo $product_id;
+	//$time=strtotime("2012-12-10");
 	$content = $source['content'];
 	//产品数据表中字段
-	$newsfield = array(
+	$specificationfield = array(
 	    "classid" => 23,
 	    "ttid" => 0,
 	    "onclick" => 0,
@@ -56,7 +60,7 @@ foreach ($urls as $url) {
 	    "smalltext" => $title,
 	    "diggtop" => 0,
 	    "related_products"=>"",
-	    "product_banner"=>""
+	    "product_id"=>$product_id
 	    
 	);
 	$data = $db->insert("phome_ecms_specification", $specificationfield);
@@ -71,7 +75,7 @@ foreach ($urls as $url) {
 	    "classid" => $classid,
 	    "keyid" =>"",
 	    "dokey" => 1,
-	    "newstempid" => 10,
+	    "newstempid" => 13,
 	    "closepl" => 0,
 	    "haveaddfen" => 0,
 	    "infotags" =>"" ,
@@ -95,7 +99,7 @@ foreach ($urls as $url) {
 	//print_r($proIndex);
 	$data = $db->insert("phome_ecms_specification_index", $proIndex);
 	echo 'insert into phome_ecms_specification_index success'.PHP_EOL;
-	$filename++;
+	//$filename++;
 }
 $db->close();
 

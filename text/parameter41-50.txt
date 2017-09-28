@@ -1,0 +1,439 @@
+@50@
+Model     ##          B500
+Width(mm)##         500
+Inclination(.)##         0-17
+Speed(m/s)##         1.0-2.0
+Capacity(t/h)##        100-200
+Power(L≤30m)(kw)## 4-7.5
+
+Model     ##          B650
+Width(mm)##         650
+Inclination(.)##         0-17
+Speed(m/s)##         1.0-2.0
+Capacity(t/h)##        190-380
+Power(L≤30m)(kw)## 4-11
+
+Model     ##          B800
+Width(mm)##         800
+Inclination(.)##         0-17
+Speed(m/s)##         1.0-2.0
+Capacity(t/h)##        300-600
+Power(L≤30m)(kw)## 5.5-18.5
+
+Model     ##          B1000
+Width(mm)##         1000
+Inclination(.)##         0-17
+Speed(m/s)##         1.0-2.0
+Capacity(t/h)##        490-900
+Power(L≤30m)(kw)## 7.5-22
+
+Model     ##          B1200 
+Width(mm)##         1200
+Inclination(.)##         0-17
+Speed(m/s)##         1.0-2.0
+Capacity(t/h)##        730-1400
+Power(L≤30m)(kw)## 11-30
+####
+@49@
+Model ## VU-70
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              65-75
+Capacity (t/h) ##               60-65
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～460
+
+Model ## VU-120
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              110-125
+Capacity (t/h) ##               100-110
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～815
+
+Model ## VU-170
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              155-175
+Capacity (t/h) ##               140-155
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～1050
+
+Model ## VU-220
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              205-225
+Capacity (t/h) ##               190-205
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～1320
+
+Model ## VUT-70
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              65-75
+Capacity (t/h) ##               60-65
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～375
+
+Model ## VUT-120
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              110-125
+Capacity (t/h) ##               100-110
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～665
+
+Model ## VUT-170
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              155-175
+Capacity (t/h) ##               140-155
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～870
+
+Model ## VUT-220
+Size of material (mm) ##         0-15
+Feed rate (t/h) ##              205-225
+Capacity (t/h) ##               190-205
+Filler content (Adjustable) ##     3-15%
+Installed power (kW) ##          ～1080
+####
+@48@
+Model ## Y3S23F93J46S36
+Combined Type  ##         GZD960×3800+ PE400×600 + CS75 + 3YK1237+ belt conveyor
+Max. Feeding Size(mm) ##     500
+Overall Dimension(mm) ##    15600×2900×4450
+Body Structure  ##          Two-spindle
+Power(kw) ##               200
+####
+@47@
+Model ## Y3S1848CS75
+Car Body ##            Two-Spindle
+Max. Input Size(mm) ##   400
+Screen Type ##          3YK1848 
+Crusher Type ##          S36(3′) 
+Belt Conveyor ##         B800×7.5
+Power (kw) ##           200
+Dimension (mm)      13050×2830×4350
+
+Model ## Y3S1860CS160
+Car Body ##        Three-Spindle
+Max. Input Size(mm) ##   400
+Screen Type ##       3YK1860
+Crusher Type ##      51(4.25′) 
+Belt Conveyor ##      B800×8.5
+Power (kw) ##        500
+Dimension (mm) ##  14300×2830×4380
+
+Model ## Y3S1860HP220
+Car Body ##        Three-Spindle
+Max. Input Size(mm) ##   400
+Screen Type ##       3YK1860
+Crusher Type ##       HPC220 
+Belt Conveyor ##      B800×8.5
+Power (kw) ##        550
+Dimension (mm) ##  14300×2830×4380
+
+Model ## Y3S2160HP220
+Car Body ##            Three-Spindle
+Max. Input Size(mm) ##   400
+Screen Type ##           3YK2160
+Crusher Type ##          HPC220 
+Belt Conveyor ##         B1000×8.5
+Power (kw) ##           550
+Dimension (mm) ##     14300×3150×4380
+####
+@46@
+Model ## YF938FW1214Ⅱ
+Car Body  ##           Two-Spindle
+Max. Input Size(mm) ##   500
+Feeder Type  ##        GZD960×3800 
+Crusher Type  ##       PFW1214II
+Belt Conveyor ##       B800×8.5
+Power (kw) ##          360
+Dimension (mm) ##     12600×2550×3870
+
+Model ## YF1142FW315Ⅱ
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   580
+Feeder Type  ##        GZD1100×4200
+Crusher Type  ##       PFW1315II
+Belt Conveyor ##       B1000×9.5
+Power (kw) ##          400
+Dimension (mm) ##     13900×2750×4180
+
+Model ## YF1349FW318Ⅱ
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   750
+Feeder Type  ##        GZD1300×4900
+Crusher Type  ##       PFW1318II
+Belt Conveyor ##       B1200×10.5
+Power (kw) ##          500
+Dimension (mm) ##     15450×2950×4180
+
+Model ## Y3S1860F1214-N
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   400
+Screen Type  ##        3YK1860
+Crusher Type  ##       PF1214
+Belt Conveyor ##       B800×8.5
+Power (kw) ##          360
+Dimension (mm) ##    14300×2830×4380
+
+Model ## Y3S2160F1315-N
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   400
+Screen Type  ##        3YK2160
+Crusher Type  ##       PF1315
+Belt Conveyor ##       B1000×8.5
+Power (kw) ##          500
+Dimension (mm) ##    14300×3190×4380
+
+Model ## Y3S1860FW214Ⅲ
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   400
+Screen Type  ##        3YK1860
+Crusher Type  ##       PFW1214Ⅲ
+Belt Conveyor ##       B800×8.5
+Power (kw) ##          360
+Dimension (mm) ##    14300×2830×4380
+
+Model ## Y3S2160FW315Ⅲ
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   400
+Screen Type  ##        3YK2160
+Crusher Type  ##       PFW1315Ⅲ
+Belt Conveyor ##       B1000×8.5
+Power (kw) ##          400
+Dimension (mm) ##    14300×3190×4380
+####
+@45@
+Model ## YF938J69-N
+Car Body  ##           Two-Spindle
+Max. Input Size(mm) ##   500
+Feeder Type ##         GZD960×3800 
+Crusher Type ##        PE600×900
+Belt Conveyor ##       B800×8.5
+Power (kw) ##         200
+Dimension (mm) ##     12600×2550×3870
+
+Model ## YF1142J710-N
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   580
+Feeder Type ##        GZD1100×4200
+Crusher Type ##        PE750×1060
+Belt Conveyor ##       B1000×9.5
+Power (kw) ##         250
+Dimension (mm) ##     13900×2750×4320
+
+Model ## YF1349J912-N
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   750
+Feeder Type ##        GZD1100×4900
+Crusher Type ##        PE900×1200
+Belt Conveyor ##       B1200×10.5
+Power (kw) ##         270
+Dimension (mm) ##     15450×2950×4380
+
+Model ## YF1349J811-N
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   750
+Feeder Type ##        GZD1300×4900
+Crusher Type ##        PEW860
+Belt Conveyor ##       B1200×10.5
+Power (kw) ##         320
+Dimension (mm) ##     15450×2950×4380
+
+Model ## YF1349J1120-N
+Car Body  ##           Three-Spindle
+Max. Input Size(mm) ##   750
+Feeder Type ##        GZD1300×4900
+Crusher Type ##        PEW1100
+Belt Conveyor  ##      B1200×10.5
+Power (kw) ##         400
+Dimension (mm) ##     15450×2950×4380
+####
+@44@
+Model ## LD-3YK1548
+Screen Type ##                 3YK1548
+Hopper Volume (M3)##           3
+Loading Height (mm)##           2000
+Belt Feeder ##                  B1000x4M 
+Fines Conveyor  ##               B800x4.5 M
+Height of Fines Conveyor (mm)##   2200
+Side Conveyor  ##               B500x7.3M*3
+Height of Side Conveyor (mm)##   3500
+Power (kw)##                   150
+Dimension (mm)##               12600×3280×4000
+Total Weight (t)##                28
+
+Model ## LD-3YK1848
+Screen Type ##                 LD-3YK1848
+Hopper Volume (M3)##           5
+Loading Height (mm)##           2100
+Belt Feeder ##                  B1000x4M 
+Fines Conveyor ##                B1000x4.5 M
+Height of Fines Conveyor (mm)##   2400
+Side Conveyor  ##               B500x7.3M*3
+Height of Side Conveyor (mm)##   3500
+Power (kw)##                   150
+Dimension (mm)##               12600×3280×4000
+Total Weight (t)##                31
+
+Model ## LD-3YK1860
+Screen Type ##                 2YK2160
+Hopper Volume (M3)##           5
+Loading Height (mm)##           2400
+Belt Feeder ##                  B1200x4.5M 
+Fines Conveyor  ##               B1000x5.5 M
+Height of Fines Conveyor (mm)##   2800
+Side Conveyor  ##               B500x7.3M*3
+Height of Side Conveyor (mm)##   3500
+Power (kw)##                   150
+Dimension (mm)##               14000×3280×4000
+Total Weight (t)##                33
+
+Model ## LD-3YK1548B
+Screen Type ##                 3YK1548
+Hopper Volume (M3)##           3
+Loading Height (mm)##           2000
+Belt Feeder ##  B1200x3M 
+Fines Conveyor ##                B800x7 M
+Height of Fines Conveyor (mm)##   2400
+Side Conveyor ##                B500x7.3M*3
+Height of Side Conveyor (mm)##   3500
+Power (kw)##                   150
+Dimension (mm)##               14200×3000×3700
+Total Weight (t)##                30
+
+Model ## LD-3YK1848B
+Screen Type ##                 3YK1848
+Hopper Volume (M3)##           5
+Loading Height (mm)##           2100
+Belt Feeder ##                  B1200x3M 
+Fines Conveyor##                 B1000x7 M
+Height of Fines Conveyor (mm)##   2800
+Side Conveyor ##                B500x7.3M*3
+Height of Side Conveyor (mm)##   3500
+Power (kw)##                   150
+Dimension (mm)##               14200×3000×3700
+Total Weight (t)##                33
+
+Model ## LD-3YK1860B
+Screen Type ##                 3YK1860
+Hopper Volume (M3)##           5
+Loading Height (mm)##           2400
+Belt Feeder ##                  B1200x3M 
+Fines Conveyor ##                B1000x8M
+Height of Fines Conveyor (mm)##   2800
+Side Conveyor  ##               B500x7.3M*3
+Height of Side Conveyor (mm)##   3500
+Power (kw)##                   150
+Dimension (mm)##               16500×3000×3980
+Total Weight (t)##                35
+####
+@43@
+Model ## LD-S36
+Crusher Type      ##            S36"
+Belt Feeder       ##           GLD-1200×4/15                   
+Hopper Volume (M3)##           4
+Feeding Height (mm) ##          2900
+Main Conveyor  ##              B800x8 M
+Height of Conveyor (mm)##       2600
+Power (kw) ##                  150
+Dimension (mm) ##              12000×3000×3700
+Total Weight (t)  ##              34.4
+
+Model ## LD-S51
+Crusher Type  ##                S51"
+Belt Feeder   ##               GLD-1200×4/15                   B1000x4M
+Hopper Volume (M3) ##          5
+Feeding Height (mm) ##          3100
+Main Conveyor  ##              B1000x9 M
+Height of Conveyor (mm) ##      3100
+Power (kw)    ##               370
+Dimension (mm)  ##             14800×3100×4000
+Total Weight (t)  ##              51
+
+Model ## LD-HP220
+Crusher Type ##                 HP220
+Belt Feeder  ##                GLD-1200×4/15                   B1000x4M
+Hopper Volume (M3)  ##         5
+Feeding Height (mm) ##          3100
+Main Conveyor  ##              B1000x9 M
+Height of Conveyor (mm) ##      3100
+Power (kw) ##                  440
+Dimension (mm)  ##            14800×3100×4000
+Total Weight (t)  ##              45
+####
+@42@
+Model ## LD-PF1210
+Feeder Type     ##               GZD-960x3800
+Crusher Type     ##               PF1210
+Main Conveyor   ##               B800x8.5 M
+Height of Main Conveyor (mm)##     3200
+Side Conveyor  ##                 B450x3 M
+Height of Side Conveyor (mm)  ##    2800
+Power (kw)   ##                   200
+Dimension (mm)  ##               11500×2900×3650
+Total Weight (t)  ##                 39
+
+Model ## LD-PF1214
+Feeder Type   ##                 GZD-960x3800
+Crusher Type   ##                 PF1214
+Main Conveyor  ##               B800x8.5 M
+Height of Main Conveyor (mm) ##    3200
+Side Conveyor ##                  B450x3 M
+Height of Side Conveyor (mm)  ##    2800
+Power (kw)   ##                   250
+Dimension (mm)  ##               11700×2900×3650
+Total Weight (t)   ##                40
+
+Model ## LD-PFW1214
+Feeder Type    ##                GZD-960x3800
+Crusher Type   ##                 PFW1214
+Main Conveyor  ##                B800x8.5 M
+Height of Main Conveyor (mm) ##    3500
+Side Conveyor ##                  B450x3 M
+Height of Side Conveyor (mm) ##     2800
+Power (kw)  ##                    300
+Dimension (mm) ##                11800×2900×3950
+Total Weight (t)  ##                 43
+
+Model ## LD-PFW1315
+Feeder Type   ##                 GZD-1100x4200
+Crusher Type   ##                 PFW1315
+Main Conveyor ##                 B1000x9M
+Height of Main Conveyor (mm) ##    3500
+Side Conveyor   ##                B500x3.5 M
+Height of Side Conveyor (mm)##      3000
+Power (kw) ##                     380
+Dimension (mm) ##                13500×3200×4160
+Total Weight (t)  ##                 60
+####
+@41@
+Model ## LD-PE600x900
+Feeder ##                    GZD-960x3800
+Crusher ##                    PE600x900
+Main Conveyor  ##                B800x8.5 M
+Height of Main Conveyor (mm)##     3200
+Side Conveyor ##                  B450x3 M
+Height of Side Conveyor (mm)  ##    2800
+Power (kw)    ##                  180
+Dimension (mm)  ##               11800×2900×3660
+Total Weight (t)    ##               40
+
+Model ## LD-PE750x1060
+Feeder Type   ##                 GZD-960x3800
+Crusher Type   ##                PE750x1060
+Main Conveyor    ##              B1000x9 M
+Height of Main Conveyor (mm) ##    3500
+Side Conveyor    ##               B500x3.5 M
+Height of Side Conveyor (mm) ##     3100
+Power (kw)  ##                    250
+Dimension (mm)   ##              13500×3200×4120
+Total Weight (t)  ##                 60
+
+Model ## LD-PEW860
+Feeder Type    ##                GZD-1100x3800
+Crusher Type   ##                PEW860
+Main Conveyor   ##               B1000x9 M
+Height of Main Conveyor (mm)##     3600
+Side Conveyor ##                  B500x3.5 M
+Height of Side Conveyor (mm)##      3100
+Power (kw)  ##                    300
+Dimension (mm) ##                13500×3200×4150
+Total Weight (t)   ##                63
