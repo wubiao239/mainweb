@@ -11,7 +11,7 @@ function get_content($fileName){
 	$fp = fopen($fileName, "rb") or die("Unable to open file ".$fileName);
 	$content=fread($fp,filesize($fileName));
 	fclose($fp);
-	return mb_convert_encoding($content, "UTF-8");
+	return $content;
 
 }
 function get_parameter($uri){
@@ -36,12 +36,12 @@ function get_parameter($uri){
 				$parameter[product_id]=$pro_id;
 			foreach ($paralinea as $value) {
 				$para=explode("##",$value);
-				
-				if(!empty($para[0]))
+				//echo $para[0]."=======".trim($para[1]).PHP_EOL;
+				if(!empty($para[0])&&!empty($para[1])){
 					$k=trim($para[0]);
 					$v=trim($para[1]);
 					$parameter[$k]=$v;
-					
+				}
 
 			}
 			//print_r($parameter);
@@ -85,7 +85,7 @@ function get_source($uri){
 	}
 	return $sources;
 }
-// $s=get_source("./text/parameter30-40.txt");
+$s=get_source("./text/parameter30-40.txt");
 // foreach ($s as $key => $value) {
 	 
 // 	echo $value[title].'==='.urlencode(strtolower(trim($value[title]))).PHP_EOL;
